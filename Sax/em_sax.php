@@ -169,10 +169,10 @@ class MySaxHandler extends DefaultHandler {
       $this->is_river_length=False;
     }
 
-    // if($this->is_sea_name){
-    //   $this->sea_temp->_name = $txt;
-    //   $this->is_sea_name=False;
-    // }
+    if($this->is_sea_name){
+      $this->sea_temp->_name = $txt;
+      $this->is_sea_name=False;
+    }
   }
 
   function startDocument() {
@@ -208,14 +208,14 @@ class MySaxHandler extends DefaultHandler {
 
     foreach ($this->list_country as $country) {
       if(country_have_river($country, $list_river_to_sea)){
-        echo "\t\t<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}>\n";
-        fputs($file, "\t\t<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}>\n");
+        echo "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\">\n";
+        fputs($file, "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\">\n");
 
         foreach ($list_river_to_sea as $river) {
           if($country->_car_code == $river->_source){
 
-            echo "\t\t\t<fleuve id-f={$river->_id} nom-f={$river->_name} longueur={$river->_length} se-jette={$river->_flow}>\n";
-            fputs($file, "\t\t\t<fleuve id-f={$river->_id} nom-f={$river->_name} longueur={$river->_length} se-jette={$river->_flow}>\n");
+            echo "\t\t\t<fleuve id-f=\"{$river->_id}\" nom-f=\"{$river->_name}\" longueur=\"{$river->_length}\" se-jette=\"{$river->_flow}\">\n";
+            fputs($file, "\t\t\t<fleuve id-f=\"{$river->_id}\" nom-f=\"{$river->_name}\" longueur=\"{$river->_length}\" se-jette=\"{$river->_flow}\">\n");
 
             $country_list = explode(" ", $river->_countrys);
 
@@ -237,8 +237,8 @@ class MySaxHandler extends DefaultHandler {
         fputs($file, "\t\t</pays>\n");
       }
       else{
-        echo "\t\t<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}/>\n";
-        fputs($file, "\t\t<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}/>\n");
+        echo "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\"/>\n";
+        fputs($file, "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\"/>\n");
       }
 
     }
@@ -250,14 +250,14 @@ class MySaxHandler extends DefaultHandler {
     fputs($file, "\t<liste-espace-maritime>\n");
 
     foreach ($this->list_sea as $sea) {
-      echo "\t\t<espace-maritime id-e={$sea->_id} nom-e={$sea->_name} type={$sea->_type}>\n";
-      fputs($file, "\t\t<espace-maritime id-e={$sea->_id} nom-e={$sea->_name} type={$sea->_type}>\n");
+      echo "\t\t<espace-maritime id-e=\"{$sea->_id}\" nom-e=\"{$sea->_name}\" type=\"{$sea->_type}\">\n";
+      fputs($file, "\t\t<espace-maritime id-e=\"{$sea->_id}\" nom-e=\"{$sea->_name}\" type=\"{$sea->_type}\">\n");
 
       $country_list = explode(" ", $sea->_countrys);
 
-      foreach ($country_list as $country) {
-        echo "\t\t\t<cotoie id-p={$country}/>\n";
-        fputs($file, "\t\t\t<cotoie id-p={$country}/>\n");
+      foreach ($country_list as $country){
+        echo "\t\t\t<cotoie id-p=\"{$country}\"/>\n";
+        fputs($file, "\t\t\t<cotoie id-p=\"{$country}\"/>\n");
       }
       echo "\t\t</espace-maritime>\n";
       fputs($file, "\t\t</espace-maritime>\n");
