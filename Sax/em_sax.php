@@ -28,6 +28,13 @@ class Sea
   public $_countrys;
 }
 
+function country_have_river($country, $list_river_to_sea) {
+    foreach ($list_river_to_sea as $river) {
+      if($country->_car_code == $river->_source)
+        return True;
+    }
+    return False;
+}
 
 class MySaxHandler extends DefaultHandler {
 
@@ -177,25 +184,63 @@ class MySaxHandler extends DefaultHandler {
   function endDocument() {
     echo "</em>\n";
 
-    foreach ($this->list_country as $country) {
-      //echo "<country ip_p={$country->_car_code} nom_p={$country->_name} superficie={$country->_area} nbhab={$country->_population}>\n \n" ;
-      echo "country : carcode={$country->_car_code} nom_p={$country->_name} sup={$country->_area} pop={$country->_population}\n";
-    }
+
+    //Séléction des fleuves
+    $list_river_to_sea = array();
+
     foreach ($this->list_river as $river) {
       if(!empty($river->_flow_in_sea) && $river->_flow_in_sea == "sea" && !empty($river->_flow)){
-        echo "river : id={$river->_id} nom={$river->_name} longueur={$river->_length} se-jette={$river->_flow} countrys={$river->_countrys} source={$river->_source}\n";
+        $list_river_to_sea[] = $river;
       }
     }
+
+
+
+    foreach ($this->list_country as $country) {
+      if(country_have_river($country, $list_river_to_sea)){
+        echo "<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}>\n";
+
+        foreach ($list_river_to_sea as $river) {
+          if($country->_car_code == $river->_source){
+
+            echo "\t<fleuve id-f={$river->_id} nom-f={$river->_name} longueur={$river->_length} se-jette={$river->_flow}>\n";
+
+            $country_list = explode(" ", $river->_countrys);
+
+            if(count($country_list) == 1){
+              echo "\t\t<parcours id-pays=\"{$country_list[0]}\" distance=\"{$river->_length}\"/>\n";
+            }
+            else{
+              foreach ($country_list as $c) {
+                echo "\t\t<parcours id-pays=\"{$c}\" distance=\"inconnu\"/>\n";
+              }
+            }
+            echo "\t</fleuve>\n";
+          }
+        }
+        echo "</pays>\n";
+      }
+      else{
+        echo "<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}/>\n";
+      }
+
+    }
+
+    //Espaces martimes
     foreach ($this->list_sea as $sea) {
       echo "sea : id={$sea->_id} nom_e={$sea->_name} type={$sea->_type}\n";
       $country_list = explode(" ", $sea->_countrys);
 
       foreach ($country_list as $country) {
         echo "\tcotoie : id-p={$country}\n";
+      }
     }
   }
+
+
 }
-}
+
+
 
 $xml = file_get_contents('../Mondial2015/XML/mondial.xml');
 $sax = new SaxParser(new MySaxHandler());
