@@ -20,9 +20,18 @@ class River
   public $_source; //car_code
 }
 
+class Sea
+{
+  public $_id;
+  public $_name;
+  public $_type;
+  public $_countrys;
+}
+
 
 class MySaxHandler extends DefaultHandler {
 
+  //Global variables
   public $list_country = array();
   public $country_temp;
   public $is_country = False;
@@ -36,6 +45,11 @@ class MySaxHandler extends DefaultHandler {
   public $is_river_to = False;
   public $is_river_length = False;
 
+  public $list_sea = array();
+  public $sea_temp;
+  public $is_sea = False;
+  public $is_sea_name = False;
+
   function startElement($nom, $att) {
     switch($nom) {
   		case 'country' :
@@ -48,11 +62,14 @@ class MySaxHandler extends DefaultHandler {
   		case 'name' :
         if($this->is_country){
           if(empty($this->country_temp->_name))
-          $this->is_country_name = True;
+            $this->is_country_name = True;
         }
         if($this->is_river){
           if(empty($this->river_temp->_name))
-          $this->is_river_name = True;
+            $this->is_river_name = True;
+        }
+        if($this->is_sea){
+            $this->is_sea_name = True;
         }
         break;
 
@@ -64,7 +81,7 @@ class MySaxHandler extends DefaultHandler {
 
       case 'river' :
         $this->is_river = True;
-        $this->river_temp = new Country();
+        $this->river_temp = new River();
         $this->river_temp->_id = $att['id'];
         $this->river_temp->_countrys = $att['country'];
         break;
@@ -84,6 +101,16 @@ class MySaxHandler extends DefaultHandler {
           $this->river_temp->_source = $att['country'];
         }
         break;
+
+      case 'sea' :
+        echo "sea={$att['id']}\n";
+        $this->is_sea=True;
+        $this->sea_temp = new Sea();
+
+        $this->sea_temp->_id = $att['id'];
+        $this->sea_temp->_countrys = $att['country'];
+        $this->sea_temp->_type = "inconnu";
+        break;
   		default :;
   	}
   }
@@ -99,12 +126,21 @@ class MySaxHandler extends DefaultHandler {
       case 'population_growth' :
         $this->is_country=False;
         break;
+
       case 'river':
         $this->is_river=False;
         $this->list_river[] = $this->river_temp;
         break;
       case 'to':
         $this->is_river_to=False;
+
+      case 'sea':
+        if($this->is_sea){
+          $this->is_sea=False;
+          $this->list_sea[] = $this->sea_temp;
+        }
+
+        break;
     }
   }
 
@@ -126,6 +162,11 @@ class MySaxHandler extends DefaultHandler {
       $this->river_temp->_length = $txt;
       $this->is_river_length=False;
     }
+
+    // if($this->is_sea_name){
+    //   $this->sea_temp->_name = $txt;
+    //   $this->is_sea_name=False;
+    // }
   }
 
   function startDocument() {
@@ -145,7 +186,15 @@ class MySaxHandler extends DefaultHandler {
         echo "river : id={$river->_id} nom={$river->_name} longueur={$river->_length} se-jette={$river->_flow} countrys={$river->_countrys} source={$river->_source}\n";
       }
     }
+    foreach ($this->list_sea as $sea) {
+      echo "sea : id={$sea->_id} nom_e={$sea->_name} type={$sea->_type}\n";
+      $country_list = explode(" ", $sea->_countrys);
+
+      foreach ($country_list as $country) {
+        echo "\tcotoie : id-p={$country}\n";
+    }
   }
+}
 }
 
 $xml = file_get_contents('../Mondial2015/XML/mondial.xml');
