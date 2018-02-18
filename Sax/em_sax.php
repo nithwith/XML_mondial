@@ -110,7 +110,6 @@ class MySaxHandler extends DefaultHandler {
         break;
 
       case 'sea' :
-        echo "sea={$att['id']}\n";
         $this->is_sea=True;
         $this->sea_temp = new Sea();
 
@@ -177,12 +176,9 @@ class MySaxHandler extends DefaultHandler {
   }
 
   function startDocument() {
-    echo "<?xml version='1.0' encoding='UTF-8' ?>\n"; //<?php
-		echo "<!DOCTYPE espace-maritime SYSTEM 'em.dtd'>\n";
-		echo "<em>\n";
+
   }
   function endDocument() {
-    echo "</em>\n";
 
 
     //Séléction des fleuves
@@ -195,46 +191,82 @@ class MySaxHandler extends DefaultHandler {
     }
 
 
+    $file = fopen('result_sax.xml', 'a+');
+    ftruncate($file,0);
+
+    echo "<?xml version='1.0' encoding='UTF-8' ?>\n";
+    fputs($file, "<?xml version='1.0' encoding='UTF-8' ?>\n");
+
+		echo "<!DOCTYPE espace-maritime SYSTEM 'em.dtd'>\n";
+    fputs($file, "<!DOCTYPE espace-maritime SYSTEM 'em.dtd'>\n");
+
+    echo "<em>\n";
+    fputs($file, "<em>\n");
+
+    echo "\t<liste-pays>\n";
+    fputs($file, "\t<liste-pays>\n");
 
     foreach ($this->list_country as $country) {
       if(country_have_river($country, $list_river_to_sea)){
-        echo "<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}>\n";
+        echo "\t\t<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}>\n";
+        fputs($file, "\t\t<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}>\n");
 
         foreach ($list_river_to_sea as $river) {
           if($country->_car_code == $river->_source){
 
-            echo "\t<fleuve id-f={$river->_id} nom-f={$river->_name} longueur={$river->_length} se-jette={$river->_flow}>\n";
+            echo "\t\t\t<fleuve id-f={$river->_id} nom-f={$river->_name} longueur={$river->_length} se-jette={$river->_flow}>\n";
+            fputs($file, "\t\t\t<fleuve id-f={$river->_id} nom-f={$river->_name} longueur={$river->_length} se-jette={$river->_flow}>\n");
 
             $country_list = explode(" ", $river->_countrys);
 
             if(count($country_list) == 1){
-              echo "\t\t<parcours id-pays=\"{$country_list[0]}\" distance=\"{$river->_length}\"/>\n";
+              echo "\t\t\t\t<parcours id-pays=\"{$country_list[0]}\" distance=\"{$river->_length}\"/>\n";
+              fputs($file, "\t\t\t\t<parcours id-pays=\"{$country_list[0]}\" distance=\"{$river->_length}\"/>\n");
             }
             else{
               foreach ($country_list as $c) {
-                echo "\t\t<parcours id-pays=\"{$c}\" distance=\"inconnu\"/>\n";
+                echo "\t\t\t\t<parcours id-pays=\"{$c}\" distance=\"inconnu\"/>\n";
+                fputs($file, "\t\t\t\t<parcours id-pays=\"{$c}\" distance=\"inconnu\"/>\n");
               }
             }
-            echo "\t</fleuve>\n";
+            echo "\t\t\t</fleuve>\n";
+            fputs($file, "\t\t\t</fleuve>\n");
           }
         }
-        echo "</pays>\n";
+        echo "\t\t</pays>\n";
+        fputs($file, "\t\t</pays>\n");
       }
       else{
-        echo "<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}/>\n";
+        echo "\t\t<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}/>\n";
+        fputs($file, "\t\t<pays id-p='{$country->_car_code} nom-p={$country->_name} superficie={$country->_area} nbhab={$country->_population}/>\n");
       }
 
     }
+    echo "\t</liste-pays>\n";
+    fputs($file, "\t</liste-pays>\n");
 
     //Espaces martimes
+    echo "\t<liste-espace-maritime>\n";
+    fputs($file, "\t<liste-espace-maritime>\n");
+
     foreach ($this->list_sea as $sea) {
-      echo "sea : id={$sea->_id} nom_e={$sea->_name} type={$sea->_type}\n";
+      echo "\t\t<espace-maritime id-e={$sea->_id} nom-e={$sea->_name} type={$sea->_type}>\n";
+      fputs($file, "\t\t<espace-maritime id-e={$sea->_id} nom-e={$sea->_name} type={$sea->_type}>\n");
+
       $country_list = explode(" ", $sea->_countrys);
 
       foreach ($country_list as $country) {
-        echo "\tcotoie : id-p={$country}\n";
+        echo "\t\t\t<cotoie id-p={$country}/>\n";
+        fputs($file, "\t\t\t<cotoie id-p={$country}/>\n");
       }
+      echo "\t\t</espace-maritime>\n";
+      fputs($file, "\t\t</espace-maritime>\n");
     }
+    echo "\t</liste-espace-maritime>\n";
+    fputs($file, "\t</liste-espace-maritime>\n");
+
+    echo "</em>\n";
+    fputs($file, "</em>\n");
   }
 
 
@@ -243,6 +275,7 @@ class MySaxHandler extends DefaultHandler {
 
 
 $xml = file_get_contents('../Mondial2015/XML/mondial.xml');
+
 $sax = new SaxParser(new MySaxHandler());
 try {
 	$sax->parse($xml);
@@ -250,4 +283,8 @@ try {
 	echo "\n",$e;
 }catch(Exception $e) {
 	echo "Default exception >>", $e;
-}?>
+}
+
+
+
+?>
