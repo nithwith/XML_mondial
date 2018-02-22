@@ -57,6 +57,8 @@ class MySaxHandler extends DefaultHandler {
   public $is_sea = False;
   public $is_sea_name = False;
 
+
+
   function startElement($nom, $att) {
     switch($nom) {
   		case 'country' :
@@ -187,6 +189,23 @@ class MySaxHandler extends DefaultHandler {
     foreach ($this->list_river as $river) {
       if(!empty($river->_flow_in_sea) && $river->_flow_in_sea == "sea" && !empty($river->_flow)){
         $list_river_to_sea[] = $river;
+      }
+    }
+
+    //Séléction des pays
+    //Il faut que le pays possède un fleuve qui ai une accès à la mer et pays qui ont un espace maritime
+    $list_selected_country = array();
+
+    foreach ($this->list_country as $country_selected) {
+      bool addCountry = False;
+
+      foreach ($list_river_to_sea as $river) {
+        if($country_selected->_car_code == $river->_source){
+
+        }
+
+      if(){
+        $list_selected_country[] = $country_selected;
       }
     }
 
