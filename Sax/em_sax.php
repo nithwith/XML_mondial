@@ -197,14 +197,27 @@ class MySaxHandler extends DefaultHandler {
     $list_selected_country = array();
 
     foreach ($this->list_country as $country_selected) {
-      bool addCountry = False;
+      $firstSelectionCountry = False;
+      $secondSelectionCountry = False;
 
-      foreach ($list_river_to_sea as $river) {
-        if($country_selected->_car_code == $river->_source){
+      // foreach ($list_river_to_sea as $river) {
+      //   if($country_selected->_car_code == $river->_source || $firstSelectionCountry == False){
+      //     $firstSelectionCountry = True;
+      //   }
+      // }
 
+      foreach ($list_sea as $sea) {
+        $country_list = explode(" ", $sea->_countrys);
+
+        foreach ($country_list as $country_sea){
+          if($country_selected->_car_code == $country_sea  && $secondSelectionCountry == False){
+            $secondSelectionCountry = True;
+          }
         }
 
-      if(){
+      }
+
+      if($secondSelectionCountry){
         $list_selected_country[] = $country_selected;
       }
     }

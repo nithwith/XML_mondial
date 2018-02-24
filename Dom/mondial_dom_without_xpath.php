@@ -1,6 +1,6 @@
 <?php
 $doc = new DOMDocument();
-$doc->load("../PackMondial/mondial.xml");
+$doc->load("../Mondial2015/XML/mondial.xml");
 $doc->preserveWhiteSpace = false;
 $doc->validateOnParse  = true;
 $xpath = new DOMXpath($doc);
@@ -66,8 +66,8 @@ if (!empty($doc)){
 				$xml_liste_pays->appendChild($xml_pays);
 			}
 		}
-		
-		
+
+
 	}
 $xml->save("mondial.xml");
 }

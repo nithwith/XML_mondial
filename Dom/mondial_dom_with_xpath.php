@@ -1,7 +1,7 @@
 <?php
 
 $doc = new DOMDocument();
-$doc->load("../PackMondial/mondial.xml");
+$doc->load("../Mondial2015/XML/mondial.xml");
 $xpath = new DOMXpath($doc);
 
 //requête xpath pour écrêmer les résultats
@@ -71,7 +71,7 @@ if (!empty($doc)){
 			$xml_pays->appendChild($xml_other_percentage);
 		}
 		$xml_liste_pays->appendChild($xml_pays);
-		
+
 	}
 
 echo $xml->saveXML();
