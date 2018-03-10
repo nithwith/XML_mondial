@@ -28,12 +28,113 @@ class Sea
   public $_countrys;
 }
 
-function country_have_river($country, $list_river_to_sea) {
-    foreach ($list_river_to_sea as $river) {
-      if($country->_car_code == $river->_source)
+
+function country_have_river($car_code, $list_river) {
+  foreach ($list_river as $river) {
+    if(strcmp($car_code, $river->_source) == 0){
         return True;
+        break;
     }
-    return False;
+  }
+  return False;
+}
+
+function display($list_country, $list_river, $list_sea){
+
+  $list_river = select_river($list_river);
+  $list_country_selected = select_country($list_river, $list_sea);
+
+
+  $file = fopen('result_sax.xml', 'a+');
+  ftruncate($file,0);
+
+  fputs($file, "<?xml version='1.0' encoding='UTF-8' ?>\n");
+  fputs($file, "<!DOCTYPE espace-maritime SYSTEM 'em.dtd'>\n");
+  fputs($file, "<em>\n");
+  fputs($file, "\t<liste-pays>\n");
+
+  foreach ($list_country as $country) {
+    if(in_array($country->_car_code, $list_country_selected)){
+      if(country_have_river($country->_car_code, $list_river)){
+
+        fputs($file, "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\">\n");
+
+        foreach ($list_river as $river) {
+          if(strcmp($country->_car_code, $river->_source) == 0){
+            fputs($file, "\t\t\t<fleuve id-f=\"{$river->_id}\"
+            nom-f=\"{$river->_name}\"
+            longueur=\"{$river->_length}\"
+            se-jette=\"{$river->_flow}\">\n");
+            $country_list = explode(" ", $river->_countrys);
+            if(count($country_list) == 1){
+              fputs($file, "\t\t\t\t<parcourt id-pays=\"{$country_list[0]}\" distance=\"{$river->_length}\"/>\n");
+            }
+            else{
+              foreach ($country_list as $c) {
+                fputs($file, "\t\t\t\t<parcourt id-pays=\"{$c}\" distance=\"inconnu\"/>\n");
+              }
+            }
+            fputs($file, "\t\t\t</fleuve>\n");
+          }
+        }
+        fputs($file, "\t\t</pays>\n");
+      }
+      else{
+        fputs($file, "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\"/>\n");
+      }
+    }
+  }
+  fputs($file, "\t</liste-pays>\n");
+
+  //Espaces martimes
+  fputs($file, "\t<liste-espace-maritime>\n");
+
+  foreach ($list_sea as $sea) {
+    fputs($file, "\t\t<espace-maritime id-e=\"{$sea->_id}\" nom-e=\"{$sea->_name}\" type=\"{$sea->_type}\">\n");
+
+    $country_list = explode(" ", $sea->_countrys);
+
+    foreach ($country_list as $country){
+      fputs($file, "\t\t\t<cotoie id-p=\"{$country}\"/>\n");
+    }
+    fputs($file, "\t\t</espace-maritime>\n");
+  }
+  fputs($file, "\t</liste-espace-maritime>\n");
+  fputs($file, "</em>\n");
+}
+
+//Séléction des fleuves
+function select_river($list_river) {
+  $result = array();
+  foreach ($list_river as $river) {
+    if(!empty($river->_flow_in_sea) && $river->_flow_in_sea == "sea" && !empty($river->_flow)){
+      $result[] = $river;
+    }
+  }
+  return $result;
+}
+
+//Séléction des pays
+function select_country($list_river, $list_sea){
+  //Pour être affiché un pays doit avoir 2 caractéristique
+  //Doit être traverssé par un fleuve
+  //Doit faire parti d'un espace maritime
+
+  $list_country_selected = array();
+  foreach ($list_river as $river) {
+    $countrys_of_river = explode(" ", $river->_countrys);
+    foreach ($countrys_of_river as $c) {
+      $list_country_selected[] = $c;
+    }
+  }
+  foreach ($list_sea as $sea) {
+    $countrys_of_sea = explode(" ", $sea->_countrys);
+    foreach ($countrys_of_sea as $c) {
+      $list_country_selected[] = $c;
+    }
+  }
+  $list_country_selected = array_unique($list_country_selected);
+  return $list_country_selected;
 }
 
 class MySaxHandler extends DefaultHandler {
@@ -117,7 +218,7 @@ class MySaxHandler extends DefaultHandler {
 
         $this->sea_temp->_id = $att['id'];
         $this->sea_temp->_countrys = $att['country'];
-        $this->sea_temp->_type = "inconnu";
+
         break;
   		default :;
   	}
@@ -173,6 +274,11 @@ class MySaxHandler extends DefaultHandler {
 
     if($this->is_sea_name){
       $this->sea_temp->_name = $txt;
+
+      if(strpos($this->sea_temp->_name,"Sea")){$this->sea_temp->_type ="mer";}
+      elseif(strpos($this->sea_temp->_name,"Ocean")){$this->sea_temp->_type ="océan";}
+      else{$this->sea_temp->_type ="inconnu";}
+
       $this->is_sea_name=False;
     }
   }
@@ -181,131 +287,9 @@ class MySaxHandler extends DefaultHandler {
 
   }
   function endDocument() {
+    display($this->list_country, $this->list_river, $this->list_sea);
 
-
-    //Séléction des fleuves
-    $list_river_to_sea = array();
-
-    foreach ($this->list_river as $river) {
-      if(!empty($river->_flow_in_sea) && $river->_flow_in_sea == "sea" && !empty($river->_flow)){
-        $list_river_to_sea[] = $river;
-      }
-    }
-
-    //Pour être affiché un pays doit avoir 2 caractéristique
-    //Doit être traverssé par un fleuve
-    //Doit faire parti d'un espace maritime
-
-    $list_country_selected = array();
-
-    foreach ($list_river_to_sea as $river) {
-      $countrys_of_river = explode(" ", $river->_countrys);
-      foreach ($countrys_of_river as $c) {
-        $list_country_selected[] = $c;
-      }
-    }
-
-    foreach ($this->list_sea as $sea) {
-      $countrys_of_sea = explode(" ", $sea->_countrys);
-      foreach ($countrys_of_sea as $c) {
-        $list_country_selected[] = $c;
-      }
-    }
-    $list_country_selected = array_unique($list_country_selected);
-
-
-    echo "\n";
-    echo  count($list_country_selected);
-    echo "\n";
-    echo "\n";
-
-    foreach ($list_country_sea as $c) {
-      echo $c;
-      echo "\n";
-    }
-    echo count($list_country_sea);
-
-
-    $file = fopen('result_sax.xml', 'a+');
-    ftruncate($file,0);
-
-    echo "<?xml version='1.0' encoding='UTF-8' ?>\n";
-    fputs($file, "<?xml version='1.0' encoding='UTF-8' ?>\n");
-
-		echo "<!DOCTYPE espace-maritime SYSTEM 'em.dtd'>\n";
-    fputs($file, "<!DOCTYPE espace-maritime SYSTEM 'em.dtd'>\n");
-
-    echo "<em>\n";
-    fputs($file, "<em>\n");
-
-    echo "\t<liste-pays>\n";
-    fputs($file, "\t<liste-pays>\n");
-
-    foreach ($this->list_country as $country) {
-      if(in_array($country->_car_code, $list_country_selected)){
-        if(country_have_river($country, $list_river_to_sea)){
-          echo "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\">\n";
-          fputs($file, "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\">\n");
-
-          foreach ($list_river_to_sea as $river) {
-            if($country->_car_code == $river->_source){
-
-              echo "\t\t\t<fleuve id-f=\"{$river->_id}\" nom-f=\"{$river->_name}\" longueur=\"{$river->_length}\" se-jette=\"{$river->_flow}\">\n";
-              fputs($file, "\t\t\t<fleuve id-f=\"{$river->_id}\" nom-f=\"{$river->_name}\" longueur=\"{$river->_length}\" se-jette=\"{$river->_flow}\">\n");
-
-              $country_list = explode(" ", $river->_countrys);
-
-              if(count($country_list) == 1){
-                echo "\t\t\t\t<parcourt id-pays=\"{$country_list[0]}\" distance=\"{$river->_length}\"/>\n";
-                fputs($file, "\t\t\t\t<parcourt id-pays=\"{$country_list[0]}\" distance=\"{$river->_length}\"/>\n");
-              }
-              else{
-                foreach ($country_list as $c) {
-                  echo "\t\t\t\t<parcourt id-pays=\"{$c}\" distance=\"inconnu\"/>\n";
-                  fputs($file, "\t\t\t\t<parcourt id-pays=\"{$c}\" distance=\"inconnu\"/>\n");
-                }
-              }
-              echo "\t\t\t</fleuve>\n";
-              fputs($file, "\t\t\t</fleuve>\n");
-            }
-          }
-          echo "\t\t</pays>\n";
-          fputs($file, "\t\t</pays>\n");
-        }
-        else{
-          echo "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\"/>\n";
-          fputs($file, "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\"/>\n");
-        }
-      }
-
-    }
-    echo "\t</liste-pays>\n";
-    fputs($file, "\t</liste-pays>\n");
-
-    //Espaces martimes
-    echo "\t<liste-espace-maritime>\n";
-    fputs($file, "\t<liste-espace-maritime>\n");
-
-    foreach ($this->list_sea as $sea) {
-      echo "\t\t<espace-maritime id-e=\"{$sea->_id}\" nom-e=\"{$sea->_name}\" type=\"{$sea->_type}\">\n";
-      fputs($file, "\t\t<espace-maritime id-e=\"{$sea->_id}\" nom-e=\"{$sea->_name}\" type=\"{$sea->_type}\">\n");
-
-      $country_list = explode(" ", $sea->_countrys);
-
-      foreach ($country_list as $country){
-        echo "\t\t\t<cotoie id-p=\"{$country}\"/>\n";
-        fputs($file, "\t\t\t<cotoie id-p=\"{$country}\"/>\n");
-      }
-      echo "\t\t</espace-maritime>\n";
-      fputs($file, "\t\t</espace-maritime>\n");
-    }
-    echo "\t</liste-espace-maritime>\n";
-    fputs($file, "\t</liste-espace-maritime>\n");
-
-    echo "</em>\n";
-    fputs($file, "</em>\n");
-  }
-
+}
 
 }
 
@@ -321,6 +305,9 @@ try {
 }catch(Exception $e) {
 	echo "Default exception >>", $e;
 }
+
+
+
 
 
 

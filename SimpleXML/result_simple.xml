@@ -4,32 +4,32 @@
 	<liste-pays>
 		<pays id-p="AL" nom-p="Albania" superficie="28750" nbhab="2800138">
 			<fleuve id-f="river-Buna"
-            nom-f="Buna"
-            longueur="44"
-            se-jette="sea-Mittelmeer">
+             nom-f="Buna"
+             longueur="44"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="AL" distance="inconnu"/>
 				<parcourt id-pays="MNE" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Drin"
-            nom-f="Drin"
-            longueur="152"
-            se-jette="sea-Mittelmeer">
+             nom-f="Drin"
+             longueur="152"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="AL" distance="152"/>
 			</fleuve>
 		</pays>
 		<pays id-p="GR" nom-p="Greece" superficie="131940" nbhab="10816286">
 			<fleuve id-f="river-Aliakmonas"
-            nom-f="Aliakmonas"
-            longueur="297"
-            se-jette="sea-Mittelmeer">
+             nom-f="Aliakmonas"
+             longueur="297"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="GR" distance="297"/>
 			</fleuve>
 		</pays>
 		<pays id-p="MK" nom-p="Macedonia" superficie="25333" nbhab="2059794">
 			<fleuve id-f="river-Vardar"
-            nom-f="Vardar"
-            longueur="388"
-            se-jette="sea-Mittelmeer">
+             nom-f="Vardar"
+             longueur="388"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="MK" distance="inconnu"/>
 				<parcourt id-pays="GR" distance="inconnu"/>
 			</fleuve>
@@ -38,97 +38,97 @@
 		<pays id-p="MNE" nom-p="Montenegro" superficie="14026" nbhab="620029"/>
 		<pays id-p="F" nom-p="France" superficie="547030" nbhab="64933400">
 			<fleuve id-f="river-Maas"
-            nom-f="Maas"
-            longueur="925"
-            se-jette="sea-Nordsee">
+             nom-f="Maas"
+             longueur="925"
+             se-jette="sea-Nordsee">
 				<parcourt id-pays="NL" distance="inconnu"/>
 				<parcourt id-pays="B" distance="inconnu"/>
 				<parcourt id-pays="F" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Seine"
-            nom-f="Seine"
-            longueur="776"
-            se-jette="sea-Channel">
+             nom-f="Seine"
+             longueur="776"
+             se-jette="sea-Channel">
 				<parcourt id-pays="F" distance="776"/>
 			</fleuve>
 			<fleuve id-f="river-Loire"
-            nom-f="Loire"
-            longueur="1013"
-            se-jette="sea-Atlantic">
+             nom-f="Loire"
+             longueur="1013"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="F" distance="1013"/>
 			</fleuve>
 		</pays>
 		<pays id-p="E" nom-p="Spain" superficie="504750" nbhab="46815916">
 			<fleuve id-f="river-Garonne"
-            nom-f="Garonne"
-            longueur="647"
-            se-jette="sea-Atlantic">
+             nom-f="Garonne"
+             longueur="647"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="F" distance="inconnu"/>
 				<parcourt id-pays="E" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Tajo"
-            nom-f="Tajo"
-            longueur="1007"
-            se-jette="sea-Atlantic">
+             nom-f="Tajo"
+             longueur="1007"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="E" distance="inconnu"/>
 				<parcourt id-pays="P" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Douro"
-            nom-f="Douro"
-            longueur="897"
-            se-jette="sea-Atlantic">
+             nom-f="Douro"
+             longueur="897"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="E" distance="inconnu"/>
 				<parcourt id-pays="P" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Guadiana"
-            nom-f="Guadiana"
-            longueur="742"
-            se-jette="sea-Atlantic">
+             nom-f="Guadiana"
+             longueur="742"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="E" distance="inconnu"/>
 				<parcourt id-pays="P" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Guadalquivir"
-            nom-f="Guadalquivir"
-            longueur="657"
-            se-jette="sea-Atlantic">
+             nom-f="Guadalquivir"
+             longueur="657"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="E" distance="657"/>
 			</fleuve>
 			<fleuve id-f="river-Ebro"
-            nom-f="Ebro"
-            longueur="925"
-            se-jette="sea-Mittelmeer">
+             nom-f="Ebro"
+             longueur="925"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="E" distance="925"/>
 			</fleuve>
 		</pays>
 		<pays id-p="A" nom-p="Austria" superficie="83850" nbhab="8499759"/>
 		<pays id-p="CZ" nom-p="Czech Republic" superficie="78703" nbhab="10562214">
 			<fleuve id-f="river-Oder"
-            nom-f="Oder"
-            longueur="866"
-            se-jette="sea-Ostsee">
+             nom-f="Oder"
+             longueur="866"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="D" distance="inconnu"/>
 				<parcourt id-pays="PL" distance="inconnu"/>
 				<parcourt id-pays="CZ" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Elbe"
-            nom-f="Elbe"
-            longueur="1091"
-            se-jette="sea-Nordsee">
+             nom-f="Elbe"
+             longueur="1091"
+             se-jette="sea-Nordsee">
 				<parcourt id-pays="D" distance="inconnu"/>
 				<parcourt id-pays="CZ" distance="inconnu"/>
 			</fleuve>
 		</pays>
 		<pays id-p="D" nom-p="Germany" superficie="356910" nbhab="80219695">
 			<fleuve id-f="river-Weser"
-            nom-f="Weser"
-            longueur="440"
-            se-jette="sea-Nordsee">
+             nom-f="Weser"
+             longueur="440"
+             se-jette="sea-Nordsee">
 				<parcourt id-pays="D" distance="440"/>
 			</fleuve>
 			<fleuve id-f="river-Donau"
-            nom-f="Donau"
-            longueur="2845"
-            se-jette="sea-Schwarzes_Meer">
+             nom-f="Donau"
+             longueur="2845"
+             se-jette="sea-Schwarzes_Meer">
 				<parcourt id-pays="SRB" distance="inconnu"/>
 				<parcourt id-pays="A" distance="inconnu"/>
 				<parcourt id-pays="D" distance="inconnu"/>
@@ -144,39 +144,39 @@
 		<pays id-p="H" nom-p="Hungary" superficie="93030" nbhab="9937628"/>
 		<pays id-p="I" nom-p="Italy" superficie="301230" nbhab="59433744">
 			<fleuve id-f="river-Po"
-            nom-f="Po"
-            longueur="652"
-            se-jette="sea-Mittelmeer">
+             nom-f="Po"
+             longueur="652"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="I" distance="652"/>
 			</fleuve>
 			<fleuve id-f="river-Etsch"
-            nom-f="Etsch"
-            longueur="415"
-            se-jette="sea-Mittelmeer">
+             nom-f="Etsch"
+             longueur="415"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="I" distance="415"/>
 			</fleuve>
 			<fleuve id-f="river-Tiber"
-            nom-f="Tevere"
-            longueur="405"
-            se-jette="sea-Mittelmeer">
+             nom-f="Tevere"
+             longueur="405"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="I" distance="405"/>
 			</fleuve>
 			<fleuve id-f="river-Marta"
-            nom-f="Marta"
-            longueur="35"
-            se-jette="sea-Mittelmeer">
+             nom-f="Marta"
+             longueur="35"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="I" distance="35"/>
 			</fleuve>
 			<fleuve id-f="river-Arrone"
-            nom-f="Arrone"
-            longueur="35"
-            se-jette="sea-Mittelmeer">
+             nom-f="Arrone"
+             longueur="35"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="I" distance="35"/>
 			</fleuve>
 			<fleuve id-f="river-Arno"
-            nom-f="Arno"
-            longueur="240"
-            se-jette="sea-Mittelmeer">
+             nom-f="Arno"
+             longueur="240"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="I" distance="240"/>
 			</fleuve>
 		</pays>
@@ -185,9 +185,9 @@
 		<pays id-p="SLO" nom-p="Slovenia" superficie="20256" nbhab="2058821"/>
 		<pays id-p="CH" nom-p="Switzerland" superficie="41290" nbhab="8139631">
 			<fleuve id-f="river-Rhein"
-            nom-f="Rhein"
-            longueur="1324"
-            se-jette="sea-Nordsee">
+             nom-f="Rhein"
+             longueur="1324"
+             se-jette="sea-Nordsee">
 				<parcourt id-pays="D" distance="inconnu"/>
 				<parcourt id-pays="CH" distance="inconnu"/>
 				<parcourt id-pays="FL" distance="inconnu"/>
@@ -196,18 +196,18 @@
 				<parcourt id-pays="NL" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Rhone"
-            nom-f="Rhone"
-            longueur="812"
-            se-jette="sea-Mittelmeer">
+             nom-f="Rhone"
+             longueur="812"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="F" distance="inconnu"/>
 				<parcourt id-pays="CH" distance="inconnu"/>
 			</fleuve>
 		</pays>
 		<pays id-p="BY" nom-p="Belarus" superficie="207600" nbhab="9460692">
 			<fleuve id-f="river-Memel"
-            nom-f="Memel"
-            longueur="937"
-            se-jette="sea-Ostsee">
+             nom-f="Memel"
+             longueur="937"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="BY" distance="inconnu"/>
 				<parcourt id-pays="LT" distance="inconnu"/>
 				<parcourt id-pays="R" distance="inconnu"/>
@@ -217,109 +217,109 @@
 		<pays id-p="LT" nom-p="Lithuania" superficie="65200" nbhab="2979310"/>
 		<pays id-p="PL" nom-p="Poland" superficie="312683" nbhab="38533789">
 			<fleuve id-f="river-Weichsel"
-            nom-f="Weichsel"
-            longueur="1047"
-            se-jette="sea-Ostsee">
+             nom-f="Weichsel"
+             longueur="1047"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="PL" distance="1047"/>
 			</fleuve>
 		</pays>
 		<pays id-p="UA" nom-p="Ukraine" superficie="603700" nbhab="45633637">
 			<fleuve id-f="river-Dnister"
-            nom-f="Dnister"
-            longueur="1352"
-            se-jette="sea-Schwarzes_Meer">
+             nom-f="Dnister"
+             longueur="1352"
+             se-jette="sea-Schwarzes_Meer">
 				<parcourt id-pays="UA" distance="inconnu"/>
 				<parcourt id-pays="MD" distance="inconnu"/>
 			</fleuve>
 		</pays>
 		<pays id-p="R" nom-p="Russia" superficie="17075200" nbhab="143666931">
 			<fleuve id-f="river-Noerdliche_Dwina"
-            nom-f="Northern Dwina"
-            longueur="740"
-            se-jette="sea-BarentsSea">
+             nom-f="Northern Dwina"
+             longueur="740"
+             se-jette="sea-BarentsSea">
 				<parcourt id-pays="R" distance="740"/>
 			</fleuve>
 			<fleuve id-f="river-Petschora"
-            nom-f="Petschora"
-            longueur="1809"
-            se-jette="sea-BarentsSea">
+             nom-f="Petschora"
+             longueur="1809"
+             se-jette="sea-BarentsSea">
 				<parcourt id-pays="R" distance="1809"/>
 			</fleuve>
 			<fleuve id-f="river-Newa"
-            nom-f="Newa"
-            longueur="74"
-            se-jette="sea-Ostsee">
+             nom-f="Newa"
+             longueur="74"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="R" distance="74"/>
 			</fleuve>
 			<fleuve id-f="river-Narva"
-            nom-f="Narva"
-            longueur="78"
-            se-jette="sea-Ostsee">
+             nom-f="Narva"
+             longueur="78"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="R" distance="inconnu"/>
 				<parcourt id-pays="EW" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Westliche_Dwina"
-            nom-f="Western Dwina"
-            longueur="1020"
-            se-jette="sea-Ostsee">
+             nom-f="Western Dwina"
+             longueur="1020"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="BY" distance="inconnu"/>
 				<parcourt id-pays="LV" distance="inconnu"/>
 				<parcourt id-pays="R" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Dnepr"
-            nom-f="Dnepr"
-            longueur="2201"
-            se-jette="sea-Schwarzes_Meer">
+             nom-f="Dnepr"
+             longueur="2201"
+             se-jette="sea-Schwarzes_Meer">
 				<parcourt id-pays="BY" distance="inconnu"/>
 				<parcourt id-pays="UA" distance="inconnu"/>
 				<parcourt id-pays="R" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Don"
-            nom-f="Don"
-            longueur="1870"
-            se-jette="sea-Asowsches_Meer">
+             nom-f="Don"
+             longueur="1870"
+             se-jette="sea-Asowsches_Meer">
 				<parcourt id-pays="R" distance="1870"/>
 			</fleuve>
 			<fleuve id-f="river-Ob"
-            nom-f="Ob"
-            longueur="3650"
-            se-jette="sea-KaraSea">
+             nom-f="Ob"
+             longueur="3650"
+             se-jette="sea-KaraSea">
 				<parcourt id-pays="R" distance="3650"/>
 			</fleuve>
 			<fleuve id-f="river-Jenissej"
-            nom-f="Jenissej"
-            longueur="4092"
-            se-jette="sea-KaraSea">
+             nom-f="Jenissej"
+             longueur="4092"
+             se-jette="sea-KaraSea">
 				<parcourt id-pays="R" distance="4092"/>
 			</fleuve>
 			<fleuve id-f="river-Taimyra"
-            nom-f="Taimyra"
-            longueur="840"
-            se-jette="sea-SibirianSea">
+             nom-f="Taimyra"
+             longueur="840"
+             se-jette="sea-SibirianSea">
 				<parcourt id-pays="R" distance="840"/>
 			</fleuve>
 			<fleuve id-f="river-Chatanga"
-            nom-f="Chatanga"
-            longueur="1636"
-            se-jette="sea-SibirianSea">
+             nom-f="Chatanga"
+             longueur="1636"
+             se-jette="sea-SibirianSea">
 				<parcourt id-pays="R" distance="1636"/>
 			</fleuve>
 			<fleuve id-f="river-Lena"
-            nom-f="Lena"
-            longueur="4400"
-            se-jette="sea-SibirianSea">
+             nom-f="Lena"
+             longueur="4400"
+             se-jette="sea-SibirianSea">
 				<parcourt id-pays="R" distance="4400"/>
 			</fleuve>
 			<fleuve id-f="river-Kolyma"
-            nom-f="Kolyma"
-            longueur="2513"
-            se-jette="sea-SibirianSea">
+             nom-f="Kolyma"
+             longueur="2513"
+             se-jette="sea-SibirianSea">
 				<parcourt id-pays="R" distance="2513"/>
 			</fleuve>
 			<fleuve id-f="river-Amur"
-            nom-f="Amur"
-            longueur="2824"
-            se-jette="sea-OchotskSea">
+             nom-f="Amur"
+             longueur="2824"
+             se-jette="sea-OchotskSea">
 				<parcourt id-pays="R" distance="inconnu"/>
 				<parcourt id-pays="CN" distance="inconnu"/>
 			</fleuve>
@@ -330,9 +330,9 @@
 		<pays id-p="HR" nom-p="Croatia" superficie="56538" nbhab="4290612"/>
 		<pays id-p="BG" nom-p="Bulgaria" superficie="110910" nbhab="7284552">
 			<fleuve id-f="river-Maritsa"
-            nom-f="Maritsa"
-            longueur="297"
-            se-jette="sea-Mittelmeer">
+             nom-f="Maritsa"
+             longueur="297"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="BG" distance="inconnu"/>
 				<parcourt id-pays="GR" distance="inconnu"/>
 				<parcourt id-pays="TR" distance="inconnu"/>
@@ -345,69 +345,69 @@
 		<pays id-p="FARX" nom-p="Faroe Islands" superficie="1400" nbhab="48197"/>
 		<pays id-p="SF" nom-p="Finland" superficie="337030" nbhab="5455068">
 			<fleuve id-f="river-Paatsjoki"
-            nom-f="Paatsjoki"
-            longueur="145"
-            se-jette="sea-BarentsSea">
+             nom-f="Paatsjoki"
+             longueur="145"
+             se-jette="sea-BarentsSea">
 				<parcourt id-pays="SF" distance="inconnu"/>
 				<parcourt id-pays="N" distance="inconnu"/>
 				<parcourt id-pays="R" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Kemijoki"
-            nom-f="Kemijoki"
-            longueur="550"
-            se-jette="sea-Ostsee">
+             nom-f="Kemijoki"
+             longueur="550"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="SF" distance="550"/>
 			</fleuve>
 			<fleuve id-f="river-Oulujoki"
-            nom-f="Oulujoki"
-            longueur="107"
-            se-jette="sea-Ostsee">
+             nom-f="Oulujoki"
+             longueur="107"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="SF" distance="107"/>
 			</fleuve>
 			<fleuve id-f="river-Kymijoki"
-            nom-f="Kymijoki"
-            longueur="203"
-            se-jette="sea-Ostsee">
+             nom-f="Kymijoki"
+             longueur="203"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="SF" distance="203"/>
 			</fleuve>
 			<fleuve id-f="river-Kokemaeenjoki"
-            nom-f="Kokem"
-            longueur="121"
-            se-jette="sea-Ostsee">
+             nom-f="Kokemäenjoki"
+             longueur="121"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="SF" distance="121"/>
 			</fleuve>
 		</pays>
 		<pays id-p="N" nom-p="Norway" superficie="324220" nbhab="5051275">
 			<fleuve id-f="river-Glomma"
-            nom-f="Glomma"
-            longueur="604"
-            se-jette="sea-Skagerrak">
+             nom-f="Glomma"
+             longueur="604"
+             se-jette="sea-Skagerrak">
 				<parcourt id-pays="N" distance="604"/>
 			</fleuve>
 		</pays>
 		<pays id-p="S" nom-p="Sweden" superficie="449964" nbhab="9555893">
 			<fleuve id-f="river-Goetaaelv"
-            nom-f="G"
-            longueur="93"
-            se-jette="sea-Kattegat">
+             nom-f="Götaälv"
+             longueur="93"
+             se-jette="sea-Kattegat">
 				<parcourt id-pays="S" distance="93"/>
 			</fleuve>
 			<fleuve id-f="river-Umeaelv"
-            nom-f="Ume"
-            longueur="470"
-            se-jette="sea-Ostsee">
+             nom-f="Umeälv"
+             longueur="470"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="S" distance="470"/>
 			</fleuve>
 			<fleuve id-f="river-Dalaelv"
-            nom-f="Dal"
-            longueur="520"
-            se-jette="sea-Ostsee">
+             nom-f="Dalälv"
+             longueur="520"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="S" distance="520"/>
 			</fleuve>
 			<fleuve id-f="river-MotalaStrom"
-            nom-f="Motala Str"
-            longueur="100"
-            se-jette="sea-Ostsee">
+             nom-f="Motala Ström"
+             longueur="100"
+             se-jette="sea-Ostsee">
 				<parcourt id-pays="S" distance="100"/>
 			</fleuve>
 		</pays>
@@ -418,23 +418,23 @@
 		<pays id-p="MEL" nom-p="Melilla" superficie="12" nbhab="78476"/>
 		<pays id-p="IS" nom-p="Iceland" superficie="103000" nbhab="318452">
 			<fleuve id-f="river-Thjorsa"
-            nom-f="Thjorsa"
-            longueur="230"
-            se-jette="sea-Atlantic">
+             nom-f="Thjorsa"
+             longueur="230"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="IS" distance="230"/>
 			</fleuve>
 			<fleuve id-f="river-Joekulsa_a_Fjoellum"
-            nom-f="J"
-            longueur="206"
-            se-jette="sea-Greenlandsea">
+             nom-f="Jökulsa a Fjöllum"
+             longueur="206"
+             se-jette="sea-Greenlandsea">
 				<parcourt id-pays="IS" distance="206"/>
 			</fleuve>
 		</pays>
 		<pays id-p="IRL" nom-p="Ireland" superficie="70280" nbhab="4588252">
 			<fleuve id-f="river-Shannon"
-            nom-f="Shannon"
-            longueur="360"
-            se-jette="sea-Atlantic">
+             nom-f="Shannon"
+             longueur="360"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="IRL" distance="360"/>
 			</fleuve>
 		</pays>
@@ -446,86 +446,86 @@
 		<pays id-p="SVAX" nom-p="Svalbard" superficie="62049" nbhab="1872"/>
 		<pays id-p="GB" nom-p="United Kingdom" superficie="244820" nbhab="64105654">
 			<fleuve id-f="river-Themse"
-            nom-f="Thames"
-            longueur="346"
-            se-jette="sea-Nordsee">
+             nom-f="Thames"
+             longueur="346"
+             se-jette="sea-Nordsee">
 				<parcourt id-pays="GB" distance="346"/>
 			</fleuve>
 			<fleuve id-f="river-Severn"
-            nom-f="Severn"
-            longueur="354"
-            se-jette="sea-Atlantic">
+             nom-f="Severn"
+             longueur="354"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="GB" distance="354"/>
 			</fleuve>
 			<fleuve id-f="river-Trent"
-            nom-f="Trent"
-            longueur="298"
-            se-jette="sea-Nordsee">
+             nom-f="Trent"
+             longueur="298"
+             se-jette="sea-Nordsee">
 				<parcourt id-pays="GB" distance="298"/>
 			</fleuve>
 			<fleuve id-f="river-Clyde"
-            nom-f="Clyde"
-            longueur="176"
-            se-jette="sea-Irische_See">
+             nom-f="Clyde"
+             longueur="176"
+             se-jette="sea-Irische_See">
 				<parcourt id-pays="GB" distance="176"/>
 			</fleuve>
 			<fleuve id-f="river-Ness"
-            nom-f="Ness"
-            longueur="12"
-            se-jette="sea-Nordsee">
+             nom-f="Ness"
+             longueur="12"
+             se-jette="sea-Nordsee">
 				<parcourt id-pays="GB" distance="12"/>
 			</fleuve>
 		</pays>
 		<pays id-p="CN" nom-p="China" superficie="9596960" nbhab="1360720000">
 			<fleuve id-f="river-LiaoHe"
-            nom-f="Liao He"
-            longueur="1390"
-            se-jette="sea-Gelbes_Meer">
+             nom-f="Liao He"
+             longueur="1390"
+             se-jette="sea-Gelbes_Meer">
 				<parcourt id-pays="CN" distance="1390"/>
 			</fleuve>
 			<fleuve id-f="river-Hwangho"
-            nom-f="Hwangho"
-            longueur="4845"
-            se-jette="sea-Gelbes_Meer">
+             nom-f="Hwangho"
+             longueur="4845"
+             se-jette="sea-Gelbes_Meer">
 				<parcourt id-pays="CN" distance="4845"/>
 			</fleuve>
 			<fleuve id-f="river-Huai"
-            nom-f="Huai"
-            longueur="1110"
-            se-jette="sea-Gelbes_Meer">
+             nom-f="Huai"
+             longueur="1110"
+             se-jette="sea-Gelbes_Meer">
 				<parcourt id-pays="CN" distance="1110"/>
 			</fleuve>
 			<fleuve id-f="river-Jangtse"
-            nom-f="Yangtze"
-            longueur="6380"
-            se-jette="sea-EastChinaSea">
+             nom-f="Yangtze"
+             longueur="6380"
+             se-jette="sea-EastChinaSea">
 				<parcourt id-pays="CN" distance="6380"/>
 			</fleuve>
 			<fleuve id-f="river-PearlRiver"
-            nom-f="Pearl River"
-            longueur="170"
-            se-jette="sea-SouthChinaSea">
+             nom-f="Pearl River"
+             longueur="170"
+             se-jette="sea-SouthChinaSea">
 				<parcourt id-pays="CN" distance="inconnu"/>
 				<parcourt id-pays="HONX" distance="inconnu"/>
 				<parcourt id-pays="MACX" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-XiJiang"
-            nom-f="Xi Jiang"
-            longueur="2197"
-            se-jette="sea-SouthChinaSea">
+             nom-f="Xi Jiang"
+             longueur="2197"
+             se-jette="sea-SouthChinaSea">
 				<parcourt id-pays="CN" distance="2197"/>
 			</fleuve>
 			<fleuve id-f="river-HongHe"
-            nom-f="Hong He"
-            longueur="1149"
-            se-jette="sea-SouthChinaSea">
+             nom-f="Hong He"
+             longueur="1149"
+             se-jette="sea-SouthChinaSea">
 				<parcourt id-pays="CN" distance="inconnu"/>
 				<parcourt id-pays="VN" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Mekong"
-            nom-f="Mekong"
-            longueur="4350"
-            se-jette="sea-SouthChinaSea">
+             nom-f="Mekong"
+             longueur="4350"
+             se-jette="sea-SouthChinaSea">
 				<parcourt id-pays="CN" distance="inconnu"/>
 				<parcourt id-pays="LAO" distance="inconnu"/>
 				<parcourt id-pays="THA" distance="inconnu"/>
@@ -533,23 +533,23 @@
 				<parcourt id-pays="VN" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Saluen"
-            nom-f="Saluen"
-            longueur="2980"
-            se-jette="sea-AndamanSea">
+             nom-f="Saluen"
+             longueur="2980"
+             se-jette="sea-AndamanSea">
 				<parcourt id-pays="MYA" distance="inconnu"/>
 				<parcourt id-pays="CN" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Irawaddy"
-            nom-f="Irawaddy"
-            longueur="2170"
-            se-jette="sea-AndamanSea">
+             nom-f="Irawaddy"
+             longueur="2170"
+             se-jette="sea-AndamanSea">
 				<parcourt id-pays="MYA" distance="inconnu"/>
 				<parcourt id-pays="CN" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Indus"
-            nom-f="Indus"
-            longueur="3180"
-            se-jette="sea-ArabianSea">
+             nom-f="Indus"
+             longueur="3180"
+             se-jette="sea-ArabianSea">
 				<parcourt id-pays="PK" distance="inconnu"/>
 				<parcourt id-pays="IND" distance="inconnu"/>
 				<parcourt id-pays="CN" distance="inconnu"/>
@@ -563,37 +563,37 @@
 		<pays id-p="MYA" nom-p="Myanmar" superficie="678500" nbhab="51419420"/>
 		<pays id-p="IND" nom-p="India" superficie="3287590" nbhab="1210854977">
 			<fleuve id-f="river-Ganges"
-            nom-f="Ganges"
-            longueur="2620"
-            se-jette="sea-Bengal">
+             nom-f="Ganges"
+             longueur="2620"
+             se-jette="sea-Bengal">
 				<parcourt id-pays="IND" distance="inconnu"/>
 				<parcourt id-pays="BD" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Godavari"
-            nom-f="Godavari"
-            longueur="1465"
-            se-jette="sea-Bengal">
+             nom-f="Godavari"
+             longueur="1465"
+             se-jette="sea-Bengal">
 				<parcourt id-pays="IND" distance="1465"/>
 			</fleuve>
 			<fleuve id-f="river-Krishna"
-            nom-f="Krishna"
-            longueur="1291"
-            se-jette="sea-Bengal">
+             nom-f="Krishna"
+             longueur="1291"
+             se-jette="sea-Bengal">
 				<parcourt id-pays="IND" distance="1291"/>
 			</fleuve>
 			<fleuve id-f="river-Narmada"
-            nom-f="Narmada"
-            longueur="1312"
-            se-jette="sea-ArabianSea">
+             nom-f="Narmada"
+             longueur="1312"
+             se-jette="sea-ArabianSea">
 				<parcourt id-pays="IND" distance="1312"/>
 			</fleuve>
 		</pays>
 		<pays id-p="BRU" nom-p="Brunei" superficie="5770" nbhab="393372"/>
 		<pays id-p="MAL" nom-p="Malaysia" superficie="329750" nbhab="27565821">
 			<fleuve id-f="river-Rajang"
-            nom-f="Rajang"
-            longueur="563"
-            se-jette="sea-SouthChinaSea">
+             nom-f="Rajang"
+             longueur="563"
+             se-jette="sea-SouthChinaSea">
 				<parcourt id-pays="MAL" distance="563"/>
 			</fleuve>
 		</pays>
@@ -603,17 +603,17 @@
 		<pays id-p="VN" nom-p="Vietnam" superficie="329560" nbhab="88772900"/>
 		<pays id-p="NOK" nom-p="North Korea" superficie="120540" nbhab="24500520">
 			<fleuve id-f="river-Tumen"
-            nom-f="Tumen"
-            longueur="521"
-            se-jette="sea-Japanisches_Meer">
+             nom-f="Tumen"
+             longueur="521"
+             se-jette="sea-Japanisches_Meer">
 				<parcourt id-pays="CN" distance="inconnu"/>
 				<parcourt id-pays="R" distance="inconnu"/>
 				<parcourt id-pays="NOK" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Yalu"
-            nom-f="Yalu"
-            longueur="813"
-            se-jette="sea-Gelbes_Meer">
+             nom-f="Yalu"
+             longueur="813"
+             se-jette="sea-Gelbes_Meer">
 				<parcourt id-pays="CN" distance="inconnu"/>
 				<parcourt id-pays="NOK" distance="inconnu"/>
 			</fleuve>
@@ -628,58 +628,58 @@
 		<pays id-p="ET" nom-p="Egypt" superficie="1001450" nbhab="83667047"/>
 		<pays id-p="RI" nom-p="Indonesia" superficie="1919440" nbhab="252124458">
 			<fleuve id-f="river-Asahan"
-            nom-f="Asahan"
-            longueur="150"
-            se-jette="sea-MalakkaStrait">
+             nom-f="Asahan"
+             longueur="150"
+             se-jette="sea-MalakkaStrait">
 				<parcourt id-pays="RI" distance="150"/>
 			</fleuve>
 			<fleuve id-f="river-BatangHari"
-            nom-f="Batang Hari"
-            longueur="800"
-            se-jette="sea-SouthChinaSea">
+             nom-f="Batang Hari"
+             longueur="800"
+             se-jette="sea-SouthChinaSea">
 				<parcourt id-pays="RI" distance="800"/>
 			</fleuve>
 			<fleuve id-f="river-Kapuas"
-            nom-f="Kapuas"
-            longueur="1143"
-            se-jette="sea-SouthChinaSea">
+             nom-f="Kapuas"
+             longueur="1143"
+             se-jette="sea-SouthChinaSea">
 				<parcourt id-pays="RI" distance="1143"/>
 			</fleuve>
 			<fleuve id-f="river-Mahakam"
-            nom-f="Mahakam"
-            longueur="980"
-            se-jette="sea-Javasee">
+             nom-f="Mahakam"
+             longueur="980"
+             se-jette="sea-Javasee">
 				<parcourt id-pays="RI" distance="980"/>
 			</fleuve>
 			<fleuve id-f="river-Barito"
-            nom-f="Barito"
-            longueur="890"
-            se-jette="sea-Javasee">
+             nom-f="Barito"
+             longueur="890"
+             se-jette="sea-Javasee">
 				<parcourt id-pays="RI" distance="890"/>
 			</fleuve>
 		</pays>
 		<pays id-p="TL" nom-p="Timor-Leste" superficie="15007" nbhab="1066582"/>
 		<pays id-p="PNG" nom-p="Papua New Guinea" superficie="461690" nbhab="7275324">
 			<fleuve id-f="river-Sepik"
-            nom-f="Sepik"
-            longueur="1126"
-            se-jette="sea-Pacific">
+             nom-f="Sepik"
+             longueur="1126"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="PNG" distance="inconnu"/>
 				<parcourt id-pays="RI" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-FlyRiver"
-            nom-f="Fly River"
-            longueur="1120"
-            se-jette="sea-Korallensee">
+             nom-f="Fly River"
+             longueur="1120"
+             se-jette="sea-Korallensee">
 				<parcourt id-pays="PNG" distance="inconnu"/>
 				<parcourt id-pays="RI" distance="inconnu"/>
 			</fleuve>
 		</pays>
 		<pays id-p="IRQ" nom-p="Iraq" superficie="437072" nbhab="33330512">
 			<fleuve id-f="river-SchattAlArab"
-            nom-f="Schatt al Arab"
-            longueur="193"
-            se-jette="sea-PersianGulf">
+             nom-f="Schatt al Arab"
+             longueur="193"
+             se-jette="sea-PersianGulf">
 				<parcourt id-pays="IRQ" distance="inconnu"/>
 				<parcourt id-pays="IR" distance="inconnu"/>
 			</fleuve>
@@ -691,47 +691,47 @@
 		<pays id-p="RL" nom-p="Lebanon" superficie="10400" nbhab="4341092"/>
 		<pays id-p="J" nom-p="Japan" superficie="377835" nbhab="127298000">
 			<fleuve id-f="river-Ishikari"
-            nom-f="Ishikari"
-            longueur="268"
-            se-jette="sea-Pacific">
+             nom-f="Ishikari"
+             longueur="268"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="J" distance="268"/>
 			</fleuve>
 			<fleuve id-f="river-Shinano"
-            nom-f="Shinano"
-            longueur="367"
-            se-jette="sea-Japanisches_Meer">
+             nom-f="Shinano"
+             longueur="367"
+             se-jette="sea-Japanisches_Meer">
 				<parcourt id-pays="J" distance="367"/>
 			</fleuve>
 			<fleuve id-f="river-Tone"
-            nom-f="Tone"
-            longueur="322"
-            se-jette="sea-Pacific">
+             nom-f="Tone"
+             longueur="322"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="J" distance="322"/>
 			</fleuve>
 			<fleuve id-f="river-Kitakami"
-            nom-f="Kitakami"
-            longueur="249"
-            se-jette="sea-Pacific">
+             nom-f="Kitakami"
+             longueur="249"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="J" distance="249"/>
 			</fleuve>
 			<fleuve id-f="river-Yodo"
-            nom-f="Yodo"
-            longueur="75"
-            se-jette="sea-Pacific">
+             nom-f="Yodo"
+             longueur="75"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="J" distance="75"/>
 			</fleuve>
 		</pays>
 		<pays id-p="ROK" nom-p="South Korea" superficie="98480" nbhab="51141463">
 			<fleuve id-f="river-Nakdonggang"
-            nom-f="Nakdonggang"
-            longueur="526"
-            se-jette="sea-Japanisches_Meer">
+             nom-f="Nakdonggang"
+             longueur="526"
+             se-jette="sea-Japanisches_Meer">
 				<parcourt id-pays="ROK" distance="526"/>
 			</fleuve>
 			<fleuve id-f="river-Namhangang"
-            nom-f="Namhangang"
-            longueur="494"
-            se-jette="sea-Gelbes_Meer">
+             nom-f="Namhangang"
+             longueur="494"
+             se-jette="sea-Gelbes_Meer">
 				<parcourt id-pays="ROK" distance="494"/>
 			</fleuve>
 		</pays>
@@ -741,15 +741,15 @@
 		<pays id-p="YE" nom-p="Yemen" superficie="527970" nbhab="24527000"/>
 		<pays id-p="RP" nom-p="Philippines" superficie="299764" nbhab="92337852">
 			<fleuve id-f="river-Pansipit"
-            nom-f="Pansipit River"
-            longueur="9"
-            se-jette="sea-SouthChinaSea">
+             nom-f="Pansipit River"
+             longueur="9"
+             se-jette="sea-SouthChinaSea">
 				<parcourt id-pays="RP" distance="9"/>
 			</fleuve>
 			<fleuve id-f="river-Agus"
-            nom-f="Agus River"
-            longueur="37"
-            se-jette="sea-Sulusee">
+             nom-f="Agus River"
+             longueur="37"
+             se-jette="sea-Sulusee">
 				<parcourt id-pays="RP" distance="37"/>
 			</fleuve>
 		</pays>
@@ -765,28 +765,28 @@
 		<pays id-p="BZ" nom-p="Belize" superficie="22960" nbhab="312971"/>
 		<pays id-p="GCA" nom-p="Guatemala" superficie="108890" nbhab="15073375">
 			<fleuve id-f="river-RioUsumacinta"
-            nom-f="Rio Usumacinta"
-            longueur="1000"
-            se-jette="sea-Golf_von_Mexiko">
+             nom-f="Rio Usumacinta"
+             longueur="1000"
+             se-jette="sea-Golf_von_Mexiko">
 				<parcourt id-pays="MEX" distance="inconnu"/>
 				<parcourt id-pays="GCA" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-RioDulce"
-            nom-f="Rio Dulce"
-            longueur="43"
-            se-jette="sea-Caribbean">
+             nom-f="Rio Dulce"
+             longueur="43"
+             se-jette="sea-Caribbean">
 				<parcourt id-pays="GCA" distance="43"/>
 			</fleuve>
 			<fleuve id-f="river-RioMotagua"
-            nom-f="Rio Motagua"
-            longueur="486"
-            se-jette="sea-Caribbean">
+             nom-f="Rio Motagua"
+             longueur="486"
+             se-jette="sea-Caribbean">
 				<parcourt id-pays="GCA" distance="486"/>
 			</fleuve>
 			<fleuve id-f="river-RioLempa"
-            nom-f="Rio Lempa"
-            longueur="422"
-            se-jette="sea-Pacific">
+             nom-f="Rio Lempa"
+             longueur="422"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="GCA" distance="inconnu"/>
 				<parcourt id-pays="HCA" distance="inconnu"/>
 				<parcourt id-pays="ES" distance="inconnu"/>
@@ -794,9 +794,9 @@
 		</pays>
 		<pays id-p="MEX" nom-p="Mexico" superficie="1972550" nbhab="112336538">
 			<fleuve id-f="river-RioLerma"
-            nom-f="Rio Lerma Santiago"
-            longueur="965"
-            se-jette="sea-Pacific">
+             nom-f="Rio Lerma Santiago"
+             longueur="965"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="MEX" distance="965"/>
 			</fleuve>
 		</pays>
@@ -804,92 +804,92 @@
 		<pays id-p="BVIR" nom-p="British Virgin Islands" superficie="153" nbhab="23161"/>
 		<pays id-p="CDN" nom-p="Canada" superficie="9976140" nbhab="35158304">
 			<fleuve id-f="river-RugglesRiver"
-            nom-f="Ruggles River"
-            longueur="22"
-            se-jette="sea-ArcticOcean">
+             nom-f="Ruggles River"
+             longueur="22"
+             se-jette="sea-ArcticOcean">
 				<parcourt id-pays="CDN" distance="22"/>
 			</fleuve>
 			<fleuve id-f="river-KoukdjuakRiver"
-            nom-f="Koukdjuak River"
-            longueur="80"
-            se-jette="sea-ArcticOcean">
+             nom-f="Koukdjuak River"
+             longueur="80"
+             se-jette="sea-ArcticOcean">
 				<parcourt id-pays="CDN" distance="80"/>
 			</fleuve>
 			<fleuve id-f="river-Yukon"
-            nom-f="Yukon River"
-            longueur="3185"
-            se-jette="sea-BeringSea">
+             nom-f="Yukon River"
+             longueur="3185"
+             se-jette="sea-BeringSea">
 				<parcourt id-pays="CDN" distance="inconnu"/>
 				<parcourt id-pays="USA" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Mackenzie"
-            nom-f="Mackenzie River"
-            longueur="1903"
-            se-jette="sea-ArcticOcean">
+             nom-f="Mackenzie River"
+             longueur="1903"
+             se-jette="sea-ArcticOcean">
 				<parcourt id-pays="CDN" distance="1903"/>
 			</fleuve>
 			<fleuve id-f="river-NelsonRiver"
-            nom-f="Nelson River"
-            longueur="664"
-            se-jette="sea-HudsonBay">
+             nom-f="Nelson River"
+             longueur="664"
+             se-jette="sea-HudsonBay">
 				<parcourt id-pays="CDN" distance="664"/>
 			</fleuve>
 			<fleuve id-f="river-Columbia_River"
-            nom-f="Columbia River"
-            longueur="1953"
-            se-jette="sea-Pacific">
+             nom-f="Columbia River"
+             longueur="1953"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="CDN" distance="inconnu"/>
 				<parcourt id-pays="USA" distance="inconnu"/>
 			</fleuve>
 		</pays>
 		<pays id-p="USA" nom-p="United States" superficie="9372610" nbhab="318857056">
 			<fleuve id-f="river-MerrimackRiver"
-            nom-f="Merrimack River"
-            longueur="177"
-            se-jette="sea-Atlantic">
+             nom-f="Merrimack River"
+             longueur="177"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="USA" distance="177"/>
 			</fleuve>
 			<fleuve id-f="river-Connecticut_River"
-            nom-f="Connecticut River"
-            longueur="655"
-            se-jette="sea-Atlantic">
+             nom-f="Connecticut River"
+             longueur="655"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="USA" distance="655"/>
 			</fleuve>
 			<fleuve id-f="river-Hudson_River"
-            nom-f="Hudson River"
-            longueur="493"
-            se-jette="sea-Atlantic">
+             nom-f="Hudson River"
+             longueur="493"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="USA" distance="493"/>
 			</fleuve>
 			<fleuve id-f="river-Susquehanna"
-            nom-f="Susquehanna River"
-            longueur="715"
-            se-jette="sea-Atlantic">
+             nom-f="Susquehanna River"
+             longueur="715"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="USA" distance="715"/>
 			</fleuve>
 			<fleuve id-f="river-CaloosahatcheeRiver"
-            nom-f="Caloosahatchee River"
-            longueur="108"
-            se-jette="sea-Golf_von_Mexiko">
+             nom-f="Caloosahatchee River"
+             longueur="108"
+             se-jette="sea-Golf_von_Mexiko">
 				<parcourt id-pays="USA" distance="108"/>
 			</fleuve>
 			<fleuve id-f="river-Mississippi_River"
-            nom-f="Mississippi"
-            longueur="3778"
-            se-jette="sea-Golf_von_Mexiko">
+             nom-f="Mississippi"
+             longueur="3778"
+             se-jette="sea-Golf_von_Mexiko">
 				<parcourt id-pays="USA" distance="3778"/>
 			</fleuve>
 			<fleuve id-f="river-Colorado_River"
-            nom-f="Colorado"
-            longueur="2330"
-            se-jette="sea-Pacific">
+             nom-f="Colorado"
+             longueur="2330"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="MEX" distance="inconnu"/>
 				<parcourt id-pays="USA" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-RioGrandeNorte"
-            nom-f="Rio Grande del Norte"
-            longueur="3034"
-            se-jette="sea-Golf_von_Mexiko">
+             nom-f="Rio Grande del Norte"
+             longueur="3034"
+             se-jette="sea-Golf_von_Mexiko">
 				<parcourt id-pays="MEX" distance="inconnu"/>
 				<parcourt id-pays="USA" distance="inconnu"/>
 			</fleuve>
@@ -898,9 +898,9 @@
 		<pays id-p="CR" nom-p="Costa Rica" superficie="51100" nbhab="4773119"/>
 		<pays id-p="NIC" nom-p="Nicaragua" superficie="129494" nbhab="6071045">
 			<fleuve id-f="river-RioSanJuan"
-            nom-f="Rio San Juan"
-            longueur="199"
-            se-jette="sea-Caribbean">
+             nom-f="Rio San Juan"
+             longueur="199"
+             se-jette="sea-Caribbean">
 				<parcourt id-pays="NIC" distance="inconnu"/>
 				<parcourt id-pays="CR" distance="inconnu"/>
 			</fleuve>
@@ -908,18 +908,18 @@
 		<pays id-p="PA" nom-p="Panama" superficie="78200" nbhab="3405813"/>
 		<pays id-p="C" nom-p="Cuba" superficie="110860" nbhab="11167325">
 			<fleuve id-f="river-RioCauto"
-            nom-f="Rio Cauto"
-            longueur="343"
-            se-jette="sea-Caribbean">
+             nom-f="Rio Cauto"
+             longueur="343"
+             se-jette="sea-Caribbean">
 				<parcourt id-pays="C" distance="343"/>
 			</fleuve>
 		</pays>
 		<pays id-p="WD" nom-p="Dominica" superficie="746" nbhab="70739"/>
 		<pays id-p="DOM" nom-p="Dominican Republic" superficie="48730" nbhab="9445281">
 			<fleuve id-f="river-Artibonito"
-            nom-f="Artibonito"
-            longueur="343"
-            se-jette="sea-Caribbean">
+             nom-f="Artibonito"
+             longueur="343"
+             se-jette="sea-Caribbean">
 				<parcourt id-pays="RH" distance="inconnu"/>
 				<parcourt id-pays="DOM" distance="inconnu"/>
 			</fleuve>
@@ -928,15 +928,15 @@
 		<pays id-p="ES" nom-p="El Salvador" superficie="21040" nbhab="6290420"/>
 		<pays id-p="HCA" nom-p="Honduras" superficie="112090" nbhab="8045990">
 			<fleuve id-f="river-RioPatuca"
-            nom-f="Rio Patuca"
-            longueur="500"
-            se-jette="sea-Caribbean">
+             nom-f="Rio Patuca"
+             longueur="500"
+             se-jette="sea-Caribbean">
 				<parcourt id-pays="HCA" distance="500"/>
 			</fleuve>
 			<fleuve id-f="river-RioCoco"
-            nom-f="Rio Coco"
-            longueur="750"
-            se-jette="sea-Caribbean">
+             nom-f="Rio Coco"
+             longueur="750"
+             se-jette="sea-Caribbean">
 				<parcourt id-pays="HCA" distance="inconnu"/>
 				<parcourt id-pays="NIC" distance="inconnu"/>
 			</fleuve>
@@ -947,15 +947,15 @@
 		<pays id-p="JA" nom-p="Jamaica" superficie="10991" nbhab="2697983"/>
 		<pays id-p="MART" nom-p="Martinique" superficie="1128" nbhab="392291"/>
 		<pays id-p="MNTS" nom-p="Montserrat" superficie="102" nbhab="4922"/>
-		<pays id-p="CUR" nom-p="Curacao" superficie="444" nbhab="125000"/>
+		<pays id-p="CUR" nom-p="Curacao" superficie="444" nbhab="150563"/>
 		<pays id-p="NLSM" nom-p="Sint Maarten" superficie="34" nbhab="37429"/>
-		<pays id-p="SMAR" nom-p="Saint Martin" superficie="54" nbhab="5700"/>
-		<pays id-p="SBAR" nom-p="Saint Barthelemy" superficie="21" nbhab="2299"/>
+		<pays id-p="SMAR" nom-p="Saint Martin" superficie="54" nbhab="37630"/>
+		<pays id-p="SBAR" nom-p="Saint Barthelemy" superficie="21" nbhab="9072"/>
 		<pays id-p="CO" nom-p="Colombia" superficie="1138910" nbhab="47661787">
 			<fleuve id-f="river-RioMagdalena"
-            nom-f="Rio Magdalena"
-            longueur="1538"
-            se-jette="sea-Caribbean">
+             nom-f="Rio Magdalena"
+             longueur="1538"
+             se-jette="sea-Caribbean">
 				<parcourt id-pays="CO" distance="1538"/>
 			</fleuve>
 		</pays>
@@ -970,15 +970,15 @@
 		<pays id-p="AMSA" nom-p="American Samoa" superficie="199" nbhab="55519"/>
 		<pays id-p="AUS" nom-p="Australia" superficie="7686850" nbhab="23135281">
 			<fleuve id-f="river-MurrayRiver"
-            nom-f="Murray River"
-            longueur="2375"
-            se-jette="sea-Indic">
+             nom-f="Murray River"
+             longueur="2375"
+             se-jette="sea-Indic">
 				<parcourt id-pays="AUS" distance="2375"/>
 			</fleuve>
 			<fleuve id-f="river-SnowyRiver"
-            nom-f="Snowy River"
-            longueur="403"
-            se-jette="sea-Tasmansee">
+             nom-f="Snowy River"
+             longueur="403"
+             se-jette="sea-Tasmansee">
 				<parcourt id-pays="AUS" distance="403"/>
 			</fleuve>
 		</pays>
@@ -993,15 +993,15 @@
 		<pays id-p="NCA" nom-p="New Caledonia" superficie="19060" nbhab="245580"/>
 		<pays id-p="NZ" nom-p="New Zealand" superficie="268680" nbhab="4242048">
 			<fleuve id-f="river-WaikatoRiver"
-            nom-f="Waikato River"
-            longueur="425"
-            se-jette="sea-Tasmansee">
+             nom-f="Waikato River"
+             longueur="425"
+             se-jette="sea-Tasmansee">
 				<parcourt id-pays="NZ" distance="425"/>
 			</fleuve>
 			<fleuve id-f="river-CluthaRiver"
-            nom-f="Clutha River"
-            longueur="338"
-            se-jette="sea-Pacific">
+             nom-f="Clutha River"
+             longueur="338"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="NZ" distance="338"/>
 			</fleuve>
 		</pays>
@@ -1019,49 +1019,49 @@
 		<pays id-p="WS" nom-p="Samoa" superficie="2860" nbhab="187820"/>
 		<pays id-p="RA" nom-p="Argentina" superficie="2766890" nbhab="42669500">
 			<fleuve id-f="river-RioColorado"
-            nom-f="R"
-            longueur="1114"
-            se-jette="sea-Atlantic">
+             nom-f="Río Colorado"
+             longueur="1114"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="RA" distance="1114"/>
 			</fleuve>
 		</pays>
 		<pays id-p="BR" nom-p="Brazil" superficie="8511965" nbhab="202768562">
 			<fleuve id-f="river-Tocantins"
-            nom-f="Tocantins"
-            longueur="2450"
-            se-jette="sea-Atlantic">
+             nom-f="Tocantins"
+             longueur="2450"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="BR" distance="2450"/>
 			</fleuve>
 			<fleuve id-f="river-Parnaiba"
-            nom-f="Rio Parnaiba"
-            longueur="1716"
-            se-jette="sea-Atlantic">
+             nom-f="Rio Parnaiba"
+             longueur="1716"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="BR" distance="1716"/>
 			</fleuve>
 			<fleuve id-f="river-RioSaoFrancisco"
-            nom-f="Rio Sao Francisco"
-            longueur="2830"
-            se-jette="sea-Atlantic">
+             nom-f="Rio Sao Francisco"
+             longueur="2830"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="BR" distance="2830"/>
 			</fleuve>
 			<fleuve id-f="river-RioParaibaDoSul"
-            nom-f="Rio Paraiba do Sul"
-            longueur="1137"
-            se-jette="sea-Atlantic">
+             nom-f="Rio Paraiba do Sul"
+             longueur="1137"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="BR" distance="1137"/>
 			</fleuve>
 			<fleuve id-f="river-Parana"
-            nom-f="Parana"
-            longueur="2640"
-            se-jette="sea-Atlantic">
+             nom-f="Parana"
+             longueur="2640"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="RA" distance="inconnu"/>
 				<parcourt id-pays="BR" distance="inconnu"/>
 				<parcourt id-pays="PY" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Uruguay"
-            nom-f="Uruguay"
-            longueur="1790"
-            se-jette="sea-Atlantic">
+             nom-f="Uruguay"
+             longueur="1790"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="BR" distance="inconnu"/>
 				<parcourt id-pays="ROU" distance="inconnu"/>
 				<parcourt id-pays="RA" distance="inconnu"/>
@@ -1069,21 +1069,21 @@
 		</pays>
 		<pays id-p="RCH" nom-p="Chile" superficie="756950" nbhab="16341929">
 			<fleuve id-f="river-RioLoa"
-            nom-f="Rio Loa"
-            longueur="443"
-            se-jette="sea-Pacific">
+             nom-f="Rio Loa"
+             longueur="443"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="RCH" distance="443"/>
 			</fleuve>
 			<fleuve id-f="river-RioBioBio"
-            nom-f="R"
-            longueur="380"
-            se-jette="sea-Pacific">
+             nom-f="Río Bío Bío"
+             longueur="380"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="RCH" distance="380"/>
 			</fleuve>
 			<fleuve id-f="river-RioBaker"
-            nom-f="R"
-            longueur="170"
-            se-jette="sea-Pacific">
+             nom-f="Río Baker"
+             longueur="170"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="RCH" distance="170"/>
 			</fleuve>
 		</pays>
@@ -1091,9 +1091,9 @@
 		<pays id-p="ROU" nom-p="Uruguay" superficie="176220" nbhab="3286314"/>
 		<pays id-p="PE" nom-p="Peru" superficie="1285220" nbhab="30135875">
 			<fleuve id-f="river-Amazonas"
-            nom-f="Amazonas"
-            longueur="3778"
-            se-jette="sea-Atlantic">
+             nom-f="Amazonas"
+             longueur="3778"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="CO" distance="inconnu"/>
 				<parcourt id-pays="BR" distance="inconnu"/>
 				<parcourt id-pays="PE" distance="inconnu"/>
@@ -1104,45 +1104,45 @@
 		<pays id-p="SME" nom-p="Suriname" superficie="163270" nbhab="541638"/>
 		<pays id-p="YV" nom-p="Venezuela" superficie="912050" nbhab="28946101">
 			<fleuve id-f="river-Orinoco"
-            nom-f="Orinoco"
-            longueur="2010"
-            se-jette="sea-Atlantic">
+             nom-f="Orinoco"
+             longueur="2010"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="YV" distance="inconnu"/>
 				<parcourt id-pays="CO" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Essequibo"
-            nom-f="Essequibo"
-            longueur="1010"
-            se-jette="sea-Atlantic">
+             nom-f="Essequibo"
+             longueur="1010"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="GUY" distance="1010"/>
 			</fleuve>
 		</pays>
 		<pays id-p="EC" nom-p="Ecuador" superficie="283560" nbhab="14483499">
 			<fleuve id-f="river-Guayas"
-            nom-f="Rio Guayas"
-            longueur="389"
-            se-jette="sea-Pacific">
+             nom-f="Rio Guayas"
+             longueur="389"
+             se-jette="sea-Pacific">
 				<parcourt id-pays="EC" distance="389"/>
 			</fleuve>
 		</pays>
 		<pays id-p="FALK" nom-p="Falkland Islands" superficie="12173" nbhab="2931"/>
 		<pays id-p="DZ" nom-p="Algeria" superficie="2381740" nbhab="37062820">
 			<fleuve id-f="river-Chelif"
-            nom-f="Chelif"
-            longueur="700"
-            se-jette="sea-Mittelmeer">
+             nom-f="Chelif"
+             longueur="700"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="DZ" distance="700"/>
 			</fleuve>
 			<fleuve id-f="river-Rhumel"
-            nom-f="Rhumel"
-            longueur="200"
-            se-jette="sea-Mittelmeer">
+             nom-f="Rhumel"
+             longueur="200"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="DZ" distance="200"/>
 			</fleuve>
 			<fleuve id-f="river-Medjerda"
-            nom-f="Medjerda"
-            longueur="460"
-            se-jette="sea-Mittelmeer">
+             nom-f="Medjerda"
+             longueur="460"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="DZ" distance="inconnu"/>
 				<parcourt id-pays="TN" distance="inconnu"/>
 			</fleuve>
@@ -1159,18 +1159,18 @@
 		<pays id-p="NAM" nom-p="Namibia" superficie="825418" nbhab="2113077"/>
 		<pays id-p="ZRE" nom-p="Zaire" superficie="2345410" nbhab="62191161">
 			<fleuve id-f="river-Zaire"
-            nom-f="Zaire"
-            longueur="4374"
-            se-jette="sea-Atlantic">
+             nom-f="Zaire"
+             longueur="4374"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="RCB" distance="inconnu"/>
 				<parcourt id-pays="ZRE" distance="inconnu"/>
 			</fleuve>
 		</pays>
 		<pays id-p="Z" nom-p="Zambia" superficie="752610" nbhab="13046508">
 			<fleuve id-f="river-Sambesi"
-            nom-f="Zambezi"
-            longueur="2574"
-            se-jette="sea-Indic">
+             nom-f="Zambezi"
+             longueur="2574"
+             se-jette="sea-Indic">
 				<parcourt id-pays="ANG" distance="inconnu"/>
 				<parcourt id-pays="NAM" distance="inconnu"/>
 				<parcourt id-pays="RB" distance="inconnu"/>
@@ -1182,9 +1182,9 @@
 		<pays id-p="BEN" nom-p="Benin" superficie="112620" nbhab="9983884"/>
 		<pays id-p="BF" nom-p="Burkina Faso" superficie="274200" nbhab="17322796">
 			<fleuve id-f="river-Volta"
-            nom-f="Volta"
-            longueur="2850"
-            se-jette="sea-Atlantic">
+             nom-f="Volta"
+             longueur="2850"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="GH" distance="inconnu"/>
 				<parcourt id-pays="BF" distance="inconnu"/>
 			</fleuve>
@@ -1194,9 +1194,9 @@
 		<pays id-p="RB" nom-p="Botswana" superficie="600370" nbhab="2038228"/>
 		<pays id-p="RSA" nom-p="South Africa" superficie="1219912" nbhab="51770560">
 			<fleuve id-f="river-Limpopo"
-            nom-f="Limpopo"
-            longueur="1750"
-            se-jette="sea-Indic">
+             nom-f="Limpopo"
+             longueur="1750"
+             se-jette="sea-Indic">
 				<parcourt id-pays="RSA" distance="inconnu"/>
 				<parcourt id-pays="MOC" distance="inconnu"/>
 				<parcourt id-pays="ZW" distance="inconnu"/>
@@ -1209,9 +1209,9 @@
 		<pays id-p="EAT" nom-p="Tanzania" superficie="945090" nbhab="44928923"/>
 		<pays id-p="CAM" nom-p="Cameroon" superficie="475440" nbhab="19406100">
 			<fleuve id-f="river-Sanaga"
-            nom-f="Sanaga"
-            longueur="918"
-            se-jette="sea-Atlantic">
+             nom-f="Sanaga"
+             longueur="918"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="CAM" distance="918"/>
 			</fleuve>
 		</pays>
@@ -1220,9 +1220,9 @@
 		<pays id-p="CV" nom-p="Cape Verde" superficie="4033" nbhab="491875"/>
 		<pays id-p="SUD" nom-p="Sudan" superficie="1861484" nbhab="35652002">
 			<fleuve id-f="river-Nil"
-            nom-f="Nile"
-            longueur="3090"
-            se-jette="sea-Mittelmeer">
+             nom-f="Nile"
+             longueur="3090"
+             se-jette="sea-Mittelmeer">
 				<parcourt id-pays="ET" distance="inconnu"/>
 				<parcourt id-pays="SUD" distance="inconnu"/>
 			</fleuve>
@@ -1230,26 +1230,26 @@
 		<pays id-p="COM" nom-p="Comoros" superficie="2170" nbhab="683081"/>
 		<pays id-p="RG" nom-p="Guinea" superficie="245860" nbhab="10628972">
 			<fleuve id-f="river-Gambia"
-            nom-f="Gambia"
-            longueur="1120"
-            se-jette="sea-Atlantic">
+             nom-f="Gambia"
+             longueur="1120"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="RG" distance="inconnu"/>
 				<parcourt id-pays="WAG" distance="inconnu"/>
 				<parcourt id-pays="SN" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Senegal"
-            nom-f="Senegal"
-            longueur="1430"
-            se-jette="sea-Atlantic">
+             nom-f="Senegal"
+             longueur="1430"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="RMM" distance="inconnu"/>
 				<parcourt id-pays="RIM" distance="inconnu"/>
 				<parcourt id-pays="SN" distance="inconnu"/>
 				<parcourt id-pays="RG" distance="inconnu"/>
 			</fleuve>
 			<fleuve id-f="river-Niger"
-            nom-f="Niger"
-            longueur="4184"
-            se-jette="sea-Atlantic">
+             nom-f="Niger"
+             longueur="4184"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="RMM" distance="inconnu"/>
 				<parcourt id-pays="RN" distance="inconnu"/>
 				<parcourt id-pays="WAN" distance="inconnu"/>
@@ -1261,9 +1261,9 @@
 		<pays id-p="ER" nom-p="Eritrea" superficie="121320" nbhab="5741159"/>
 		<pays id-p="ETH" nom-p="Ethiopia" superficie="1127127" nbhab="84320987">
 			<fleuve id-f="river-Jubba"
-            nom-f="Jubba"
-            longueur="1658"
-            se-jette="sea-Indic">
+             nom-f="Jubba"
+             longueur="1658"
+             se-jette="sea-Indic">
 				<parcourt id-pays="ETH" distance="inconnu"/>
 				<parcourt id-pays="SP" distance="inconnu"/>
 			</fleuve>
@@ -1276,9 +1276,9 @@
 		<pays id-p="WAL" nom-p="Sierra Leone" superficie="71740" nbhab="5751976"/>
 		<pays id-p="LS" nom-p="Lesotho" superficie="30350" nbhab="2008921">
 			<fleuve id-f="river-Oranje"
-            nom-f="Oranje"
-            longueur="2160"
-            se-jette="sea-Atlantic">
+             nom-f="Oranje"
+             longueur="2160"
+             se-jette="sea-Atlantic">
 				<parcourt id-pays="LS" distance="inconnu"/>
 				<parcourt id-pays="NAM" distance="inconnu"/>
 				<parcourt id-pays="RSA" distance="inconnu"/>
@@ -1286,9 +1286,9 @@
 		</pays>
 		<pays id-p="RM" nom-p="Madagascar" superficie="587041" nbhab="21842167">
 			<fleuve id-f="river-Mangoky"
-            nom-f="Mangoky"
-            longueur="714"
-            se-jette="sea-Indic">
+             nom-f="Mangoky"
+             longueur="714"
+             se-jette="sea-Indic">
 				<parcourt id-pays="RM" distance="714"/>
 			</fleuve>
 		</pays>
@@ -1300,6 +1300,7 @@
 		<pays id-p="STP" nom-p="Sao Tome and Principe" superficie="1001" nbhab="187356"/>
 		<pays id-p="SY" nom-p="Seychelles" superficie="455" nbhab="90945"/>
 	</liste-pays>
+
 	<liste-espace-maritime>
 		<espace-maritime id-e="sea-Atlantic" nom-e="Atlantic Ocean" type="océan">
 			<cotoie id-p="F"/>
