@@ -2,11 +2,11 @@
 
 Pour exexuter les développements réalisés merci de suivre les instruction ci dessous
 
-#Configuration obligatoire
+# Configuration obligatoire
 - PHP 7.0.25
 
 # XSLT
-- Rendez vous dans le répertoire Xslt 
+- Rendez vous dans le répertoire Xslt
 
 A COMPLETER
 
@@ -16,7 +16,7 @@ A COMPLETER
 
 Vous trouverez ensuite le fichier de résultat dans votre répertoire sous le nom : result_sax.xml
 
-#DOM
+# DOM
 - Rendez vous dans le répertoire Dom
 - executer la commande : php
 
