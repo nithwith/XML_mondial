@@ -4,15 +4,15 @@
     exclude-result-prefixes="xs"
     version="2.0">
     <xsl:output method="xml" indent="yes" doctype-system="em.dtd"/>
-    
+
     <!--Template de création de l'élément racine-->
     <xsl:template match="/">
         <xsl:element name="em">
-            
+
             <xsl:element name="liste-pays">
                 <xsl:apply-templates select="id(/mondial/country[/mondial/river[to/@watertype eq 'sea']/tokenize(@country, '\s+') = @car_code  or /mondial/sea/tokenize(@country, '\s+') =  @car_code]/@car_code)" mode="pays"/>
             </xsl:element>
-            
+
             <xsl:element name="liste-espace-maritime">
                 <xsl:choose>
                     <xsl:when test="type">
@@ -27,10 +27,10 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:element>
-            
+
         </xsl:element>
     </xsl:template>
-    
+
     <!-- Template de création des pays   -->
     <xsl:template match="country" mode="pays">
         <xsl:element name="pays">
@@ -51,8 +51,8 @@
             />
         </xsl:element>
     </xsl:template>
-    
-    <!-- Template de création des fleuve dans les pays-->
+
+    <!-- Template de création des fleuves dans les pays-->
     <xsl:template match="river">
         <xsl:variable name="countries" select="id(./@country)"/>
         <xsl:element name="fleuve">
@@ -83,7 +83,7 @@
             </xsl:choose>
         </xsl:element>
     </xsl:template>
-    
+
     <!-- Template de création des pays dans le parcours des fleuves   -->
     <xsl:template match="country" mode="parcourt">
         <xsl:param name="dist"/>
@@ -96,7 +96,7 @@
             </xsl:attribute>
         </xsl:element>
     </xsl:template>
-    
+
 <!--    Template de création des espace maritime-->
     <xsl:template match="sea">
         <xsl:param name="t"/>
@@ -113,7 +113,7 @@
             <xsl:apply-templates select="id(./@country)" mode="cotoie"/>
         </xsl:element>
     </xsl:template>
-    
+
 <!--    Template de creation des pays qui cotoie une mer-->
     <xsl:template match="country" mode="cotoie">
         <xsl:element name="cotoie">
