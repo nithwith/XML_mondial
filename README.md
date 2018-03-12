@@ -2,7 +2,7 @@
 
 Pour éxécuter les développements réalisés merci de suivre les instructions ci dessous
 Il est possible de lancer le script shell "exec.sh" avec la commande "./exec.sh". Celui ci va lancer tous les exercices. Si vous voulez lancer les commandes manuellement il faut :
-/!\Se placer dans le répertoire racine du projet /!\
+/!\**Se placer dans le répertoire racine du projet**/!\
 
 
 ### Configuration obligatoire
