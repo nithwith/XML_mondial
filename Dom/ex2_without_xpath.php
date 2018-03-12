@@ -95,7 +95,6 @@ function createCountries($filteredCountries,$countries, $rivers, $doctmp) {
           $fleuve->setAttribute('nom-f', $elem->nodeValue);
         }
         if ($elem->nodeName == "to") {
-          $is_good++;
           $fleuve->setAttribute('se-jette',$elem->getAttribute('water'));
         }
         if ($elem->nodeName == "length") {
