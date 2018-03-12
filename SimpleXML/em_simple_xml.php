@@ -25,8 +25,8 @@ class Sea
   public $_countrys;
 }
 
-if (file_exists('Mondial2015/XML/mondial.xml')) {
-    $xml = simplexml_load_file('Mondial2015/XML/mondial.xml');
+if (file_exists('../Mondial2015/XML/mondial.xml')) {
+    $xml = simplexml_load_file('../Mondial2015/XML/mondial.xml');
 }
 
 $list_country = array();
@@ -117,32 +117,33 @@ function result_dom($list_country, $list_river, $list_sea){
 
   $imp = new DOMImplementation;
   $dtd = $imp->createDocumentType('em', '', 'em.dtd');
-  $resultXML = new DOMDocument('1.0', 'utf-8');
-  $resultXML->appendChild($dtd);
+  $xml = new DOMDocument('1.0', 'utf-8');
+  $xml->appendChild($dtd);
 
   // AutoIndent le code
-  $resultXML->preserveWhiteSpace = false;
-  $resultXML->formatOutput = true;
+  $xml->preserveWhiteSpace = false;
+  $xml->formatOutput = true;
 
   // Création de la racine
-  $racine = $resultXML->createElement('em');
+  $racine = $xml->createElement('em');
 
-  //Ajout du conten
-  $racine->appendChild(create_content_dom($list_country, $list_river, $list_sea, $resultXML ));
+  //Ajout du contenu
+  $content = create_content_dom($list_country, $list_river, $list_sea, $xml);
+  $racine->appendChild($content);
 
-  $resultXML->appendChild($racine);
+  $xml->appendChild($racine);
 
-  $resultXML->save('out/result_simple_xml.xml');
+  $xml->save('result_simple_xml.xml');
 }
 
-function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
-  $res = $doctmp->createElement('liste-pays');
+function create_content_dom($list_country, $list_river, $list_sea, $xml ) {
+  $liste_pays = $xml->createElement('liste-pays');
 
   $list_country_selected = select_country($list_river, $list_sea);
 
   foreach ($list_country as $c) {
     if(in_array($c->_car_code, $list_country_selected)){
-      $country =  $doctmp->createElement('pays');
+      $country =  $xml->createElement('pays');
 
       $country->setAttribute('id-p', $c->_car_code);
       $country->setAttribute('nom-p', $c->_name);
@@ -151,7 +152,7 @@ function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
 
       foreach ($list_river as $r) {
         if(strcmp($c->_car_code, $r->_source) == 0){
-          $fleuve = $doctmp->createElement('fleuve');
+          $fleuve = $xml->createElement('fleuve');
 
           $fleuve->setAttribute('id-f', $r->_id);
           $fleuve->setAttribute('nom-f', $r->_name);
@@ -160,7 +161,7 @@ function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
 
           $splited = explode(" ", $r->_countrys);
             foreach ($splited as $car_code) {
-                $parcourt = $doctmp->createElement('parcourt');
+                $parcourt = $xml->createElement('parcourt');
                 $parcourt->setAttribute('id-pays', $car_code);
 
                 if (sizeof($splited) == 1) {
@@ -173,14 +174,14 @@ function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
             $country->appendChild($fleuve);
           }
         }
-        $res->appendChild($country);
+        $liste_pays->appendChild($country);
       }
     }
 
-    $em = $doctmp->createElement('liste-espace-maritime');
+    $liste_espace_maritime = $xml->createElement('liste-espace-maritime');
 
     foreach ($list_sea as $s) {
-      $sea = $doctmp->createElement('espace-maritime');
+      $sea = $xml->createElement('espace-maritime');
 
       $sea->setAttribute('id-e',$s->_id);
       $sea->setAttribute('nom-e',$s->_name);
@@ -189,15 +190,16 @@ function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
       $splited = explode(" ",$s->_countrys);
 
       foreach ($splited as $id) {
-          $cnt = $doctmp->createElement('cotoie');
+          $cnt = $xml->createElement('cotoie');
 
           $cnt->setAttribute('id-p', $id);
           $sea->appendChild($cnt);
       }
-      $em->appendChild($sea);
+      $liste_espace_maritime->appendChild($sea);
     }
-    $res->appendChild($em);
-  return $res;
+    $xml->appendChild($liste_pays);
+    //$xml->appendChild($liste_espace_maritime);
+  return $xml;
 }
 
 ?>
