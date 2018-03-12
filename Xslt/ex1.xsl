@@ -10,7 +10,7 @@
         <xsl:element name="em">
 
             <xsl:element name="liste-pays">
-                <xsl:apply-templates select="id(/mondial/country[/mondial/river[to/@watertype eq 'sea']/tokenize(@country, '\s+') = @car_code  or /mondial/sea/tokenize(@country, '\s+') =  @car_code]/@car_code)" mode="pays"/>
+                <xsl:apply-templates select="id(/mondial/country[/mondial/river[./to/@watertype eq 'sea']/tokenize(@country, '\s+') = @car_code  or /mondial/sea/tokenize(@country, '\s+') =  @car_code]/@car_code)" mode="pays"/>
             </xsl:element>
 
             <xsl:element name="liste-espace-maritime">
@@ -47,7 +47,7 @@
                 <xsl:value-of select="population[last()]"/>
             </xsl:attribute>
             <xsl:apply-templates
-                select="/mondial/river[to/@watertype eq 'sea' and source/@country eq current()/@car_code]"
+                select="/mondial/river[./to/@watertype eq 'sea' and source/@country eq current()/@car_code]"
             />
         </xsl:element>
     </xsl:template>

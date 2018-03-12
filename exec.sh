@@ -23,3 +23,5 @@ echo ----- Fin de l exercice 2  -----
 echo ----- Lancement de l exercice 3  -----
 echo ----- Fichier de sorti : result_simple_xml.xml -----
 time php SimpleXML/em_simple_xml.php
+
+echo ----- Fin de l exercice 3  -----
