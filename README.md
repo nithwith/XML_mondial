@@ -7,7 +7,7 @@ Il est possible de lancer le script shell "exec.sh" avec la commande "./exec.sh"
 
 ### Configuration obligatoire
 - PHP 7.0.25
-
+- Java
 ## XSLT
 -Commande : time java -jar Xslt/saxon9he.jar -xsl:Xslt/ex1.xsl -s:Mondial2015/XML/mondial.xml -o:out/ex1.xml
 

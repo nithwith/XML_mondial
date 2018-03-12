@@ -31,6 +31,7 @@ $listeMaritime = createMaritime($resultXML, $xpath);
 $racine->appendChild($listeMaritime);
 
 
+//Création des pays
 function createCountries($doctmp, $xpath){
   $ret = $doctmp->createElement('liste-pays');
   //Requete liste pays filtered
@@ -45,13 +46,19 @@ function createCountries($doctmp, $xpath){
   $liste_river_filtered = $xpath->query($req_rivers_filtered);
 
   $tmp_countries_filtered = "";
+  //On parcourt tous les rivers filtré sur watertype = 'sea'
+  ///On ajoute tous les ID des country trouvés dans la variable qui va permettre le filtrage des pays
   foreach ($xpath->query($req_rivers_filtered . '/@country') as $river_id) {
     $tmp_countries_filtered = $tmp_countries_filtered . $river_id->value . " ";
   }
+
+  //On parcourt toutes les mers pour récupérer les ID des country qui ont des mers
+  //On ajoute tous les ID dans la même variable globale que pour les rivières
   foreach ($xpath->query($req_sea) as $sea) {
     $tmp_countries_filtered = $tmp_countries_filtered . $sea->value . " ";
   }
 
+  //On filtre les pays
   $liste_country_tmp = explode(" ", $tmp_countries_filtered);
   foreach ($xpath->query($req_country) as $key) {
     if (in_array($key->getAttribute('car_code'), $liste_country_tmp)) {
@@ -59,9 +66,12 @@ function createCountries($doctmp, $xpath){
     }
   }
 
+  //Création des pays
   foreach ($liste_country_filtered as $pays) {
     $cntry =  $doctmp->createElement('pays');
     $cntry->setAttribute('id-p', $pays->getAttribute('car_code'));
+
+    //On parcourt ses childNodes pour les différents attributs
     foreach ( $pays->childNodes as $key ) {
       if($key->nodeName == "name") {
         $cntry->setAttribute('nom-p', $key->nodeValue);
@@ -72,6 +82,7 @@ function createCountries($doctmp, $xpath){
       }
     }
 
+    //On créer les fleuves
     foreach ($liste_river_filtered as $river) {
       $fleuve = $doctmp->createElement('fleuve');
       $fleuve->setAttribute('id-f', $river->getAttribute('id'));
@@ -89,6 +100,8 @@ function createCountries($doctmp, $xpath){
           $splited = explode(" ", $river->getAttribute('country'));
 
           //on ne peux pas réutuliser $liste_country car il est déjà utilisé (étrange ????)
+          //Surement du au processeur xpath, les résuktats des requetes query ne sont finalement pas stockées dans un tableau
+          //Mais reste finalement un objet qui est exécuté directement dans le foreach (je pense?)
           foreach ($xpath->query($req_country) as $country) {
             foreach ($splited as $id) {
               if ($id == $country->getAttribute('car_code')) {
@@ -112,6 +125,7 @@ function createCountries($doctmp, $xpath){
   return $ret;
 }
 
+//Création des espaces maritimes
 function createMaritime($doctmp, $xpath){
   $ret = $doctmp->createElement('liste-espace-maritime');
   $req_rivers_filtered = '/mondial/river[to/@watertype = "sea"]';

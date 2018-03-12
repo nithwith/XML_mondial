@@ -229,7 +229,7 @@
       <fleuve id-f="river-Kymijoki" nom-f="Kymijoki" longueur="203" se-jette="sea-Ostsee">
         <parcourt id-pays="SF" distance="203"/>
       </fleuve>
-      <fleuve id-f="river-Kokemaeenjoki" nom-f="Kokem" longueur="121" se-jette="sea-Ostsee">
+      <fleuve id-f="river-Kokemaeenjoki" nom-f="Kokemäenjoki" longueur="121" se-jette="sea-Ostsee">
         <parcourt id-pays="SF" distance="121"/>
       </fleuve>
     </pays>
@@ -239,16 +239,16 @@
       </fleuve>
     </pays>
     <pays id-p="S" nom-p="Sweden" superficie="449964" nbhab="9555893">
-      <fleuve id-f="river-Goetaaelv" nom-f="G" longueur="93" se-jette="sea-Kattegat">
+      <fleuve id-f="river-Goetaaelv" nom-f="Götaälv" longueur="93" se-jette="sea-Kattegat">
         <parcourt id-pays="S" distance="93"/>
       </fleuve>
-      <fleuve id-f="river-Umeaelv" nom-f="Ume" longueur="470" se-jette="sea-Ostsee">
+      <fleuve id-f="river-Umeaelv" nom-f="Umeälv" longueur="470" se-jette="sea-Ostsee">
         <parcourt id-pays="S" distance="470"/>
       </fleuve>
-      <fleuve id-f="river-Dalaelv" nom-f="Dal" longueur="520" se-jette="sea-Ostsee">
+      <fleuve id-f="river-Dalaelv" nom-f="Dalälv" longueur="520" se-jette="sea-Ostsee">
         <parcourt id-pays="S" distance="520"/>
       </fleuve>
-      <fleuve id-f="river-MotalaStrom" nom-f="Motala Str" longueur="100" se-jette="sea-Ostsee">
+      <fleuve id-f="river-MotalaStrom" nom-f="Motala Ström" longueur="100" se-jette="sea-Ostsee">
         <parcourt id-pays="S" distance="100"/>
       </fleuve>
     </pays>
@@ -261,7 +261,7 @@
       <fleuve id-f="river-Thjorsa" nom-f="Thjorsa" longueur="230" se-jette="sea-Atlantic">
         <parcourt id-pays="IS" distance="230"/>
       </fleuve>
-      <fleuve id-f="river-Joekulsa_a_Fjoellum" nom-f="J" longueur="206" se-jette="sea-Greenlandsea">
+      <fleuve id-f="river-Joekulsa_a_Fjoellum" nom-f="Jökulsa a Fjöllum" longueur="206" se-jette="sea-Greenlandsea">
         <parcourt id-pays="IS" distance="206"/>
       </fleuve>
     </pays>
@@ -587,10 +587,10 @@
     <pays id-p="JA" nom-p="Jamaica" superficie="10991" nbhab="2697983"/>
     <pays id-p="MART" nom-p="Martinique" superficie="1128" nbhab="392291"/>
     <pays id-p="MNTS" nom-p="Montserrat" superficie="102" nbhab="4922"/>
-    <pays id-p="CUR" nom-p="Curacao" superficie="444" nbhab="125000"/>
+    <pays id-p="CUR" nom-p="Curacao" superficie="444" nbhab="150563"/>
     <pays id-p="NLSM" nom-p="Sint Maarten" superficie="34" nbhab="37429"/>
-    <pays id-p="SMAR" nom-p="Saint Martin" superficie="54" nbhab="5700"/>
-    <pays id-p="SBAR" nom-p="Saint Barthelemy" superficie="21" nbhab="2299"/>
+    <pays id-p="SMAR" nom-p="Saint Martin" superficie="54" nbhab="37630"/>
+    <pays id-p="SBAR" nom-p="Saint Barthelemy" superficie="21" nbhab="9072"/>
     <pays id-p="CO" nom-p="Colombia" superficie="1138910" nbhab="47661787">
       <fleuve id-f="river-RioMagdalena" nom-f="Rio Magdalena" longueur="1538" se-jette="sea-Caribbean">
         <parcourt id-pays="CO" distance="1538"/>
@@ -643,7 +643,7 @@
     <pays id-p="WAFU" nom-p="Wallis and Futuna" superficie="274" nbhab="12197"/>
     <pays id-p="WS" nom-p="Samoa" superficie="2860" nbhab="187820"/>
     <pays id-p="RA" nom-p="Argentina" superficie="2766890" nbhab="42669500">
-      <fleuve id-f="river-RioColorado" nom-f="R" longueur="1114" se-jette="sea-Atlantic">
+      <fleuve id-f="river-RioColorado" nom-f="Río Colorado" longueur="1114" se-jette="sea-Atlantic">
         <parcourt id-pays="RA" distance="1114"/>
       </fleuve>
     </pays>
@@ -675,10 +675,10 @@
       <fleuve id-f="river-RioLoa" nom-f="Rio Loa" longueur="443" se-jette="sea-Pacific">
         <parcourt id-pays="RCH" distance="443"/>
       </fleuve>
-      <fleuve id-f="river-RioBioBio" nom-f="R" longueur="380" se-jette="sea-Pacific">
+      <fleuve id-f="river-RioBioBio" nom-f="Río Bío Bío" longueur="380" se-jette="sea-Pacific">
         <parcourt id-pays="RCH" distance="380"/>
       </fleuve>
-      <fleuve id-f="river-RioBaker" nom-f="R" longueur="170" se-jette="sea-Pacific">
+      <fleuve id-f="river-RioBaker" nom-f="Río Baker" longueur="170" se-jette="sea-Pacific">
         <parcourt id-pays="RCH" distance="170"/>
       </fleuve>
     </pays>
@@ -837,435 +837,435 @@
     <pays id-p="HELX" nom-p="Saint Helena" superficie="413" nbhab="5663"/>
     <pays id-p="STP" nom-p="Sao Tome and Principe" superficie="1001" nbhab="187356"/>
     <pays id-p="SY" nom-p="Seychelles" superficie="455" nbhab="90945"/>
-    <liste-espace-maritime>
-      <espace-maritime id-e="sea-Atlantic" nom-e="Atlantic Ocean" type="océan">
-        <cotoie id-p="F"/>
-        <cotoie id-p="E"/>
-        <cotoie id-p="GBZ"/>
-        <cotoie id-p="IS"/>
-        <cotoie id-p="IRL"/>
-        <cotoie id-p="GB"/>
-        <cotoie id-p="P"/>
-        <cotoie id-p="AG"/>
-        <cotoie id-p="BS"/>
-        <cotoie id-p="BDS"/>
-        <cotoie id-p="CDN"/>
-        <cotoie id-p="USA"/>
-        <cotoie id-p="C"/>
-        <cotoie id-p="WD"/>
-        <cotoie id-p="DOM"/>
-        <cotoie id-p="RH"/>
-        <cotoie id-p="WG"/>
-        <cotoie id-p="KN"/>
-        <cotoie id-p="WL"/>
-        <cotoie id-p="WV"/>
-        <cotoie id-p="TT"/>
-        <cotoie id-p="RA"/>
-        <cotoie id-p="BR"/>
-        <cotoie id-p="RCH"/>
-        <cotoie id-p="ROU"/>
-        <cotoie id-p="FGU"/>
-        <cotoie id-p="GUY"/>
-        <cotoie id-p="SME"/>
-        <cotoie id-p="YV"/>
-        <cotoie id-p="RIM"/>
-        <cotoie id-p="MA"/>
-        <cotoie id-p="WSA"/>
-        <cotoie id-p="ANG"/>
-        <cotoie id-p="RCB"/>
-        <cotoie id-p="NAM"/>
-        <cotoie id-p="ZRE"/>
-        <cotoie id-p="BEN"/>
-        <cotoie id-p="WAN"/>
-        <cotoie id-p="RT"/>
-        <cotoie id-p="RSA"/>
-        <cotoie id-p="CI"/>
-        <cotoie id-p="GH"/>
-        <cotoie id-p="CAM"/>
-        <cotoie id-p="GQ"/>
-        <cotoie id-p="G"/>
-        <cotoie id-p="CV"/>
-        <cotoie id-p="RG"/>
-        <cotoie id-p="LB"/>
-        <cotoie id-p="WAG"/>
-        <cotoie id-p="SN"/>
-        <cotoie id-p="GNB"/>
-        <cotoie id-p="WAL"/>
-        <cotoie id-p="NLSM"/>
-        <cotoie id-p="SMAR"/>
-        <cotoie id-p="SBAR"/>
-        <cotoie id-p="STP"/>
-        <cotoie id-p="PR"/>
-        <cotoie id-p="AXA"/>
-        <cotoie id-p="GUAD"/>
-        <cotoie id-p="MART"/>
-        <cotoie id-p="BVIR"/>
-        <cotoie id-p="MNTS"/>
-        <cotoie id-p="VIRG"/>
-        <cotoie id-p="HELX"/>
-        <cotoie id-p="FALK"/>
-        <cotoie id-p="SPMI"/>
-        <cotoie id-p="BERM"/>
-        <cotoie id-p="TUCA"/>
-        <cotoie id-p="SVAX"/>
-        <cotoie id-p="GROX"/>
-        <cotoie id-p="FARX"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Mittelmeer" nom-e="Mediterranean Sea" type="mer">
-        <cotoie id-p="AL"/>
-        <cotoie id-p="GR"/>
-        <cotoie id-p="MNE"/>
-        <cotoie id-p="HR"/>
-        <cotoie id-p="BIH"/>
-        <cotoie id-p="SLO"/>
-        <cotoie id-p="F"/>
-        <cotoie id-p="E"/>
-        <cotoie id-p="I"/>
-        <cotoie id-p="TR"/>
-        <cotoie id-p="MC"/>
-        <cotoie id-p="M"/>
-        <cotoie id-p="CY"/>
-        <cotoie id-p="IL"/>
-        <cotoie id-p="GAZA"/>
-        <cotoie id-p="ET"/>
-        <cotoie id-p="SYR"/>
-        <cotoie id-p="RL"/>
-        <cotoie id-p="DZ"/>
-        <cotoie id-p="LAR"/>
-        <cotoie id-p="MA"/>
-        <cotoie id-p="TN"/>
-        <cotoie id-p="GBZ"/>
-        <cotoie id-p="CEU"/>
-        <cotoie id-p="MEL"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Schwarzes_Meer" nom-e="Black Sea" type="mer">
-        <cotoie id-p="UA"/>
-        <cotoie id-p="R"/>
-        <cotoie id-p="BG"/>
-        <cotoie id-p="RO"/>
-        <cotoie id-p="TR"/>
-        <cotoie id-p="GE"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Marmarameer" nom-e="Marmara Sea" type="mer">
-        <cotoie id-p="TR"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Asowsches_Meer" nom-e="Sea of Azov" type="inconnu">
-        <cotoie id-p="UA"/>
-        <cotoie id-p="R"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Channel" nom-e="The Channel" type="inconnu">
-        <cotoie id-p="F"/>
-        <cotoie id-p="GB"/>
-        <cotoie id-p="GBG"/>
-        <cotoie id-p="GBJ"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Irische_See" nom-e="Irish Sea" type="mer">
-        <cotoie id-p="IRL"/>
-        <cotoie id-p="GB"/>
-        <cotoie id-p="GBM"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Nordsee" nom-e="North Sea" type="mer">
-        <cotoie id-p="NL"/>
-        <cotoie id-p="B"/>
-        <cotoie id-p="F"/>
-        <cotoie id-p="DK"/>
-        <cotoie id-p="N"/>
-        <cotoie id-p="GB"/>
-        <cotoie id-p="D"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Skagerrak" nom-e="Skagerrak" type="inconnu">
-        <cotoie id-p="N"/>
-        <cotoie id-p="S"/>
-        <cotoie id-p="DK"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Kattegat" nom-e="Kattegat" type="inconnu">
-        <cotoie id-p="S"/>
-        <cotoie id-p="DK"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Ostsee" nom-e="Baltic Sea" type="mer">
-        <cotoie id-p="D"/>
-        <cotoie id-p="PL"/>
-        <cotoie id-p="LT"/>
-        <cotoie id-p="LV"/>
-        <cotoie id-p="EW"/>
-        <cotoie id-p="R"/>
-        <cotoie id-p="SF"/>
-        <cotoie id-p="S"/>
-        <cotoie id-p="DK"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-NorwegianSea" nom-e="Norwegian Sea" type="mer">
-        <cotoie id-p="N"/>
-        <cotoie id-p="IS"/>
-        <cotoie id-p="FARX"/>
-        <cotoie id-p="SVAX"/>
-        <cotoie id-p="GB"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Greenlandsea" nom-e="Greenland Sea" type="mer">
-        <cotoie id-p="IS"/>
-        <cotoie id-p="SVAX"/>
-        <cotoie id-p="GROX"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-BarentsSea" nom-e="Barents Sea" type="mer">
-        <cotoie id-p="N"/>
-        <cotoie id-p="R"/>
-        <cotoie id-p="SVAX"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-KaraSea" nom-e="Kara Sea" type="mer">
-        <cotoie id-p="R"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-ArcticOcean" nom-e="Arctic Ocean" type="océan">
-        <cotoie id-p="R"/>
-        <cotoie id-p="CDN"/>
-        <cotoie id-p="USA"/>
-        <cotoie id-p="SVAX"/>
-        <cotoie id-p="GROX"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-SibirianSea" nom-e="East Sibirian Sea" type="mer">
-        <cotoie id-p="R"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-BeringSea" nom-e="Bering Sea" type="mer">
-        <cotoie id-p="R"/>
-        <cotoie id-p="USA"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-HudsonBay" nom-e="Hudson Bay" type="inconnu">
-        <cotoie id-p="CDN"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-LabradorSea" nom-e="Labrador Sea" type="mer">
-        <cotoie id-p="CDN"/>
-        <cotoie id-p="GROX"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Golf_von_Mexiko" nom-e="Gulf of Mexico" type="inconnu">
-        <cotoie id-p="MEX"/>
-        <cotoie id-p="USA"/>
-        <cotoie id-p="C"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Caribbean" nom-e="Caribbean Sea" type="mer">
-        <cotoie id-p="AG"/>
-        <cotoie id-p="BZ"/>
-        <cotoie id-p="GCA"/>
-        <cotoie id-p="MEX"/>
-        <cotoie id-p="CR"/>
-        <cotoie id-p="NIC"/>
-        <cotoie id-p="PA"/>
-        <cotoie id-p="C"/>
-        <cotoie id-p="WD"/>
-        <cotoie id-p="DOM"/>
-        <cotoie id-p="RH"/>
-        <cotoie id-p="HCA"/>
-        <cotoie id-p="WG"/>
-        <cotoie id-p="JA"/>
-        <cotoie id-p="CO"/>
-        <cotoie id-p="KN"/>
-        <cotoie id-p="WL"/>
-        <cotoie id-p="WV"/>
-        <cotoie id-p="YV"/>
-        <cotoie id-p="PR"/>
-        <cotoie id-p="SMAR"/>
-        <cotoie id-p="SBAR"/>
-        <cotoie id-p="AXA"/>
-        <cotoie id-p="GUAD"/>
-        <cotoie id-p="MART"/>
-        <cotoie id-p="BVIR"/>
-        <cotoie id-p="MNTS"/>
-        <cotoie id-p="VIRG"/>
-        <cotoie id-p="TT"/>
-        <cotoie id-p="NLSM"/>
-        <cotoie id-p="CUR"/>
-        <cotoie id-p="ARU"/>
-        <cotoie id-p="CAYM"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Pacific" nom-e="Pacific Ocean" type="océan">
-        <cotoie id-p="R"/>
-        <cotoie id-p="J"/>
-        <cotoie id-p="RP"/>
-        <cotoie id-p="RC"/>
-        <cotoie id-p="GCA"/>
-        <cotoie id-p="MEX"/>
-        <cotoie id-p="CDN"/>
-        <cotoie id-p="USA"/>
-        <cotoie id-p="CR"/>
-        <cotoie id-p="NIC"/>
-        <cotoie id-p="PA"/>
-        <cotoie id-p="ES"/>
-        <cotoie id-p="HCA"/>
-        <cotoie id-p="CO"/>
-        <cotoie id-p="FJI"/>
-        <cotoie id-p="KIR"/>
-        <cotoie id-p="MH"/>
-        <cotoie id-p="FSM"/>
-        <cotoie id-p="NAU"/>
-        <cotoie id-p="NZ"/>
-        <cotoie id-p="PAL"/>
-        <cotoie id-p="SLB"/>
-        <cotoie id-p="TO"/>
-        <cotoie id-p="TOK"/>
-        <cotoie id-p="TUV"/>
-        <cotoie id-p="VU"/>
-        <cotoie id-p="WS"/>
-        <cotoie id-p="RCH"/>
-        <cotoie id-p="PE"/>
-        <cotoie id-p="EC"/>
-        <cotoie id-p="RI"/>
-        <cotoie id-p="PNG"/>
-        <cotoie id-p="NCA"/>
-        <cotoie id-p="NIUE"/>
-        <cotoie id-p="NMIS"/>
-        <cotoie id-p="PITC"/>
-        <cotoie id-p="WAFU"/>
-        <cotoie id-p="AMSA"/>
-        <cotoie id-p="COOK"/>
-        <cotoie id-p="FPOL"/>
-        <cotoie id-p="GUAM"/>
-        <cotoie id-p="NORF"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-OchotskSea" nom-e="Sea of Okhotsk" type="inconnu">
-        <cotoie id-p="R"/>
-        <cotoie id-p="J"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Japanisches_Meer" nom-e="Sea of Japan" type="inconnu">
-        <cotoie id-p="R"/>
-        <cotoie id-p="J"/>
-        <cotoie id-p="ROK"/>
-        <cotoie id-p="NOK"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Gelbes_Meer" nom-e="Yellow Sea" type="mer">
-        <cotoie id-p="CN"/>
-        <cotoie id-p="ROK"/>
-        <cotoie id-p="NOK"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-EastChinaSea" nom-e="East China Sea" type="mer">
-        <cotoie id-p="CN"/>
-        <cotoie id-p="RC"/>
-        <cotoie id-p="ROK"/>
-        <cotoie id-p="J"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-SouthChinaSea" nom-e="South China Sea" type="mer">
-        <cotoie id-p="CN"/>
-        <cotoie id-p="MAL"/>
-        <cotoie id-p="THA"/>
-        <cotoie id-p="K"/>
-        <cotoie id-p="VN"/>
-        <cotoie id-p="BRU"/>
-        <cotoie id-p="SGP"/>
-        <cotoie id-p="RI"/>
-        <cotoie id-p="RP"/>
-        <cotoie id-p="RC"/>
-        <cotoie id-p="HONX"/>
-        <cotoie id-p="MACX"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Indic" nom-e="Indian Ocean" type="océan">
-        <cotoie id-p="IND"/>
-        <cotoie id-p="RI"/>
-        <cotoie id-p="CL"/>
-        <cotoie id-p="AUS"/>
-        <cotoie id-p="RSA"/>
-        <cotoie id-p="EAT"/>
-        <cotoie id-p="COM"/>
-        <cotoie id-p="YE"/>
-        <cotoie id-p="SP"/>
-        <cotoie id-p="EAK"/>
-        <cotoie id-p="RM"/>
-        <cotoie id-p="MOC"/>
-        <cotoie id-p="MS"/>
-        <cotoie id-p="SY"/>
-        <cotoie id-p="XMAS"/>
-        <cotoie id-p="COCO"/>
-        <cotoie id-p="MV"/>
-        <cotoie id-p="MAYO"/>
-        <cotoie id-p="REUN"/>
-        <cotoie id-p="TL"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-ArabianSea" nom-e="Arabian Sea" type="mer">
-        <cotoie id-p="YE"/>
-        <cotoie id-p="OM"/>
-        <cotoie id-p="SP"/>
-        <cotoie id-p="PK"/>
-        <cotoie id-p="IND"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-GulfOman" nom-e="Gulf of Oman" type="inconnu">
-        <cotoie id-p="IR"/>
-        <cotoie id-p="PK"/>
-        <cotoie id-p="OM"/>
-        <cotoie id-p="UAE"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-PersianGulf" nom-e="Persian Gulf" type="inconnu">
-        <cotoie id-p="IR"/>
-        <cotoie id-p="BRN"/>
-        <cotoie id-p="IRQ"/>
-        <cotoie id-p="KWT"/>
-        <cotoie id-p="SA"/>
-        <cotoie id-p="OM"/>
-        <cotoie id-p="UAE"/>
-        <cotoie id-p="Q"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Rotes_Meer" nom-e="Red Sea" type="mer">
-        <cotoie id-p="IL"/>
-        <cotoie id-p="ET"/>
-        <cotoie id-p="JOR"/>
-        <cotoie id-p="SA"/>
-        <cotoie id-p="YE"/>
-        <cotoie id-p="SUD"/>
-        <cotoie id-p="DJI"/>
-        <cotoie id-p="ER"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-GulfAden" nom-e="Gulf of Aden" type="inconnu">
-        <cotoie id-p="DJI"/>
-        <cotoie id-p="SP"/>
-        <cotoie id-p="YE"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Bengal" nom-e="Gulf of Bengal" type="inconnu">
-        <cotoie id-p="BD"/>
-        <cotoie id-p="MYA"/>
-        <cotoie id-p="IND"/>
-        <cotoie id-p="CL"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-AndamanSea" nom-e="Andaman Sea" type="mer">
-        <cotoie id-p="MYA"/>
-        <cotoie id-p="IND"/>
-        <cotoie id-p="THA"/>
-        <cotoie id-p="RI"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-MalakkaStrait" nom-e="Malakka Strait" type="inconnu">
-        <cotoie id-p="THA"/>
-        <cotoie id-p="RI"/>
-        <cotoie id-p="MAL"/>
-        <cotoie id-p="SGP"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Javasee" nom-e="Java Sea" type="mer">
-        <cotoie id-p="RI"/>
-        <cotoie id-p="TL"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Bandasee" nom-e="Banda Sea" type="mer">
-        <cotoie id-p="RI"/>
-        <cotoie id-p="TL"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Celebessee" nom-e="Sulawesi Sea" type="mer">
-        <cotoie id-p="RI"/>
-        <cotoie id-p="MAL"/>
-        <cotoie id-p="RP"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Sulusee" nom-e="Sulu Sea" type="mer">
-        <cotoie id-p="MAL"/>
-        <cotoie id-p="RP"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Arafurasee" nom-e="Arafura Sea" type="mer">
-        <cotoie id-p="RI"/>
-        <cotoie id-p="PNG"/>
-        <cotoie id-p="AUS"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Korallensee" nom-e="Coral Sea" type="mer">
-        <cotoie id-p="AUS"/>
-        <cotoie id-p="PNG"/>
-        <cotoie id-p="NCA"/>
-        <cotoie id-p="VU"/>
-        <cotoie id-p="SLB"/>
-      </espace-maritime>
-      <espace-maritime id-e="sea-Tasmansee" nom-e="Tasman Sea" type="mer">
-        <cotoie id-p="AUS"/>
-        <cotoie id-p="NZ"/>
-        <cotoie id-p="NORF"/>
-        <cotoie id-p="NCA"/>
-      </espace-maritime>
-    </liste-espace-maritime>
   </liste-pays>
+  <liste-espace-maritime>
+    <espace-maritime id-e="sea-Atlantic" nom-e="Atlantic Ocean" type="océan">
+      <cotoie id-p="F"/>
+      <cotoie id-p="E"/>
+      <cotoie id-p="GBZ"/>
+      <cotoie id-p="IS"/>
+      <cotoie id-p="IRL"/>
+      <cotoie id-p="GB"/>
+      <cotoie id-p="P"/>
+      <cotoie id-p="AG"/>
+      <cotoie id-p="BS"/>
+      <cotoie id-p="BDS"/>
+      <cotoie id-p="CDN"/>
+      <cotoie id-p="USA"/>
+      <cotoie id-p="C"/>
+      <cotoie id-p="WD"/>
+      <cotoie id-p="DOM"/>
+      <cotoie id-p="RH"/>
+      <cotoie id-p="WG"/>
+      <cotoie id-p="KN"/>
+      <cotoie id-p="WL"/>
+      <cotoie id-p="WV"/>
+      <cotoie id-p="TT"/>
+      <cotoie id-p="RA"/>
+      <cotoie id-p="BR"/>
+      <cotoie id-p="RCH"/>
+      <cotoie id-p="ROU"/>
+      <cotoie id-p="FGU"/>
+      <cotoie id-p="GUY"/>
+      <cotoie id-p="SME"/>
+      <cotoie id-p="YV"/>
+      <cotoie id-p="RIM"/>
+      <cotoie id-p="MA"/>
+      <cotoie id-p="WSA"/>
+      <cotoie id-p="ANG"/>
+      <cotoie id-p="RCB"/>
+      <cotoie id-p="NAM"/>
+      <cotoie id-p="ZRE"/>
+      <cotoie id-p="BEN"/>
+      <cotoie id-p="WAN"/>
+      <cotoie id-p="RT"/>
+      <cotoie id-p="RSA"/>
+      <cotoie id-p="CI"/>
+      <cotoie id-p="GH"/>
+      <cotoie id-p="CAM"/>
+      <cotoie id-p="GQ"/>
+      <cotoie id-p="G"/>
+      <cotoie id-p="CV"/>
+      <cotoie id-p="RG"/>
+      <cotoie id-p="LB"/>
+      <cotoie id-p="WAG"/>
+      <cotoie id-p="SN"/>
+      <cotoie id-p="GNB"/>
+      <cotoie id-p="WAL"/>
+      <cotoie id-p="NLSM"/>
+      <cotoie id-p="SMAR"/>
+      <cotoie id-p="SBAR"/>
+      <cotoie id-p="STP"/>
+      <cotoie id-p="PR"/>
+      <cotoie id-p="AXA"/>
+      <cotoie id-p="GUAD"/>
+      <cotoie id-p="MART"/>
+      <cotoie id-p="BVIR"/>
+      <cotoie id-p="MNTS"/>
+      <cotoie id-p="VIRG"/>
+      <cotoie id-p="HELX"/>
+      <cotoie id-p="FALK"/>
+      <cotoie id-p="SPMI"/>
+      <cotoie id-p="BERM"/>
+      <cotoie id-p="TUCA"/>
+      <cotoie id-p="SVAX"/>
+      <cotoie id-p="GROX"/>
+      <cotoie id-p="FARX"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Mittelmeer" nom-e="Mediterranean Sea" type="mer">
+      <cotoie id-p="AL"/>
+      <cotoie id-p="GR"/>
+      <cotoie id-p="MNE"/>
+      <cotoie id-p="HR"/>
+      <cotoie id-p="BIH"/>
+      <cotoie id-p="SLO"/>
+      <cotoie id-p="F"/>
+      <cotoie id-p="E"/>
+      <cotoie id-p="I"/>
+      <cotoie id-p="TR"/>
+      <cotoie id-p="MC"/>
+      <cotoie id-p="M"/>
+      <cotoie id-p="CY"/>
+      <cotoie id-p="IL"/>
+      <cotoie id-p="GAZA"/>
+      <cotoie id-p="ET"/>
+      <cotoie id-p="SYR"/>
+      <cotoie id-p="RL"/>
+      <cotoie id-p="DZ"/>
+      <cotoie id-p="LAR"/>
+      <cotoie id-p="MA"/>
+      <cotoie id-p="TN"/>
+      <cotoie id-p="GBZ"/>
+      <cotoie id-p="CEU"/>
+      <cotoie id-p="MEL"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Schwarzes_Meer" nom-e="Black Sea" type="mer">
+      <cotoie id-p="UA"/>
+      <cotoie id-p="R"/>
+      <cotoie id-p="BG"/>
+      <cotoie id-p="RO"/>
+      <cotoie id-p="TR"/>
+      <cotoie id-p="GE"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Marmarameer" nom-e="Marmara Sea" type="mer">
+      <cotoie id-p="TR"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Asowsches_Meer" nom-e="Sea of Azov" type="inconnu">
+      <cotoie id-p="UA"/>
+      <cotoie id-p="R"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Channel" nom-e="The Channel" type="inconnu">
+      <cotoie id-p="F"/>
+      <cotoie id-p="GB"/>
+      <cotoie id-p="GBG"/>
+      <cotoie id-p="GBJ"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Irische_See" nom-e="Irish Sea" type="mer">
+      <cotoie id-p="IRL"/>
+      <cotoie id-p="GB"/>
+      <cotoie id-p="GBM"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Nordsee" nom-e="North Sea" type="mer">
+      <cotoie id-p="NL"/>
+      <cotoie id-p="B"/>
+      <cotoie id-p="F"/>
+      <cotoie id-p="DK"/>
+      <cotoie id-p="N"/>
+      <cotoie id-p="GB"/>
+      <cotoie id-p="D"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Skagerrak" nom-e="Skagerrak" type="inconnu">
+      <cotoie id-p="N"/>
+      <cotoie id-p="S"/>
+      <cotoie id-p="DK"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Kattegat" nom-e="Kattegat" type="inconnu">
+      <cotoie id-p="S"/>
+      <cotoie id-p="DK"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Ostsee" nom-e="Baltic Sea" type="mer">
+      <cotoie id-p="D"/>
+      <cotoie id-p="PL"/>
+      <cotoie id-p="LT"/>
+      <cotoie id-p="LV"/>
+      <cotoie id-p="EW"/>
+      <cotoie id-p="R"/>
+      <cotoie id-p="SF"/>
+      <cotoie id-p="S"/>
+      <cotoie id-p="DK"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-NorwegianSea" nom-e="Norwegian Sea" type="mer">
+      <cotoie id-p="N"/>
+      <cotoie id-p="IS"/>
+      <cotoie id-p="FARX"/>
+      <cotoie id-p="SVAX"/>
+      <cotoie id-p="GB"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Greenlandsea" nom-e="Greenland Sea" type="mer">
+      <cotoie id-p="IS"/>
+      <cotoie id-p="SVAX"/>
+      <cotoie id-p="GROX"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-BarentsSea" nom-e="Barents Sea" type="mer">
+      <cotoie id-p="N"/>
+      <cotoie id-p="R"/>
+      <cotoie id-p="SVAX"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-KaraSea" nom-e="Kara Sea" type="mer">
+      <cotoie id-p="R"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-ArcticOcean" nom-e="Arctic Ocean" type="océan">
+      <cotoie id-p="R"/>
+      <cotoie id-p="CDN"/>
+      <cotoie id-p="USA"/>
+      <cotoie id-p="SVAX"/>
+      <cotoie id-p="GROX"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-SibirianSea" nom-e="East Sibirian Sea" type="mer">
+      <cotoie id-p="R"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-BeringSea" nom-e="Bering Sea" type="mer">
+      <cotoie id-p="R"/>
+      <cotoie id-p="USA"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-HudsonBay" nom-e="Hudson Bay" type="inconnu">
+      <cotoie id-p="CDN"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-LabradorSea" nom-e="Labrador Sea" type="mer">
+      <cotoie id-p="CDN"/>
+      <cotoie id-p="GROX"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Golf_von_Mexiko" nom-e="Gulf of Mexico" type="inconnu">
+      <cotoie id-p="MEX"/>
+      <cotoie id-p="USA"/>
+      <cotoie id-p="C"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Caribbean" nom-e="Caribbean Sea" type="mer">
+      <cotoie id-p="AG"/>
+      <cotoie id-p="BZ"/>
+      <cotoie id-p="GCA"/>
+      <cotoie id-p="MEX"/>
+      <cotoie id-p="CR"/>
+      <cotoie id-p="NIC"/>
+      <cotoie id-p="PA"/>
+      <cotoie id-p="C"/>
+      <cotoie id-p="WD"/>
+      <cotoie id-p="DOM"/>
+      <cotoie id-p="RH"/>
+      <cotoie id-p="HCA"/>
+      <cotoie id-p="WG"/>
+      <cotoie id-p="JA"/>
+      <cotoie id-p="CO"/>
+      <cotoie id-p="KN"/>
+      <cotoie id-p="WL"/>
+      <cotoie id-p="WV"/>
+      <cotoie id-p="YV"/>
+      <cotoie id-p="PR"/>
+      <cotoie id-p="SMAR"/>
+      <cotoie id-p="SBAR"/>
+      <cotoie id-p="AXA"/>
+      <cotoie id-p="GUAD"/>
+      <cotoie id-p="MART"/>
+      <cotoie id-p="BVIR"/>
+      <cotoie id-p="MNTS"/>
+      <cotoie id-p="VIRG"/>
+      <cotoie id-p="TT"/>
+      <cotoie id-p="NLSM"/>
+      <cotoie id-p="CUR"/>
+      <cotoie id-p="ARU"/>
+      <cotoie id-p="CAYM"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Pacific" nom-e="Pacific Ocean" type="océan">
+      <cotoie id-p="R"/>
+      <cotoie id-p="J"/>
+      <cotoie id-p="RP"/>
+      <cotoie id-p="RC"/>
+      <cotoie id-p="GCA"/>
+      <cotoie id-p="MEX"/>
+      <cotoie id-p="CDN"/>
+      <cotoie id-p="USA"/>
+      <cotoie id-p="CR"/>
+      <cotoie id-p="NIC"/>
+      <cotoie id-p="PA"/>
+      <cotoie id-p="ES"/>
+      <cotoie id-p="HCA"/>
+      <cotoie id-p="CO"/>
+      <cotoie id-p="FJI"/>
+      <cotoie id-p="KIR"/>
+      <cotoie id-p="MH"/>
+      <cotoie id-p="FSM"/>
+      <cotoie id-p="NAU"/>
+      <cotoie id-p="NZ"/>
+      <cotoie id-p="PAL"/>
+      <cotoie id-p="SLB"/>
+      <cotoie id-p="TO"/>
+      <cotoie id-p="TOK"/>
+      <cotoie id-p="TUV"/>
+      <cotoie id-p="VU"/>
+      <cotoie id-p="WS"/>
+      <cotoie id-p="RCH"/>
+      <cotoie id-p="PE"/>
+      <cotoie id-p="EC"/>
+      <cotoie id-p="RI"/>
+      <cotoie id-p="PNG"/>
+      <cotoie id-p="NCA"/>
+      <cotoie id-p="NIUE"/>
+      <cotoie id-p="NMIS"/>
+      <cotoie id-p="PITC"/>
+      <cotoie id-p="WAFU"/>
+      <cotoie id-p="AMSA"/>
+      <cotoie id-p="COOK"/>
+      <cotoie id-p="FPOL"/>
+      <cotoie id-p="GUAM"/>
+      <cotoie id-p="NORF"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-OchotskSea" nom-e="Sea of Okhotsk" type="inconnu">
+      <cotoie id-p="R"/>
+      <cotoie id-p="J"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Japanisches_Meer" nom-e="Sea of Japan" type="inconnu">
+      <cotoie id-p="R"/>
+      <cotoie id-p="J"/>
+      <cotoie id-p="ROK"/>
+      <cotoie id-p="NOK"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Gelbes_Meer" nom-e="Yellow Sea" type="mer">
+      <cotoie id-p="CN"/>
+      <cotoie id-p="ROK"/>
+      <cotoie id-p="NOK"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-EastChinaSea" nom-e="East China Sea" type="mer">
+      <cotoie id-p="CN"/>
+      <cotoie id-p="RC"/>
+      <cotoie id-p="ROK"/>
+      <cotoie id-p="J"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-SouthChinaSea" nom-e="South China Sea" type="mer">
+      <cotoie id-p="CN"/>
+      <cotoie id-p="MAL"/>
+      <cotoie id-p="THA"/>
+      <cotoie id-p="K"/>
+      <cotoie id-p="VN"/>
+      <cotoie id-p="BRU"/>
+      <cotoie id-p="SGP"/>
+      <cotoie id-p="RI"/>
+      <cotoie id-p="RP"/>
+      <cotoie id-p="RC"/>
+      <cotoie id-p="HONX"/>
+      <cotoie id-p="MACX"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Indic" nom-e="Indian Ocean" type="océan">
+      <cotoie id-p="IND"/>
+      <cotoie id-p="RI"/>
+      <cotoie id-p="CL"/>
+      <cotoie id-p="AUS"/>
+      <cotoie id-p="RSA"/>
+      <cotoie id-p="EAT"/>
+      <cotoie id-p="COM"/>
+      <cotoie id-p="YE"/>
+      <cotoie id-p="SP"/>
+      <cotoie id-p="EAK"/>
+      <cotoie id-p="RM"/>
+      <cotoie id-p="MOC"/>
+      <cotoie id-p="MS"/>
+      <cotoie id-p="SY"/>
+      <cotoie id-p="XMAS"/>
+      <cotoie id-p="COCO"/>
+      <cotoie id-p="MV"/>
+      <cotoie id-p="MAYO"/>
+      <cotoie id-p="REUN"/>
+      <cotoie id-p="TL"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-ArabianSea" nom-e="Arabian Sea" type="mer">
+      <cotoie id-p="YE"/>
+      <cotoie id-p="OM"/>
+      <cotoie id-p="SP"/>
+      <cotoie id-p="PK"/>
+      <cotoie id-p="IND"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-GulfOman" nom-e="Gulf of Oman" type="inconnu">
+      <cotoie id-p="IR"/>
+      <cotoie id-p="PK"/>
+      <cotoie id-p="OM"/>
+      <cotoie id-p="UAE"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-PersianGulf" nom-e="Persian Gulf" type="inconnu">
+      <cotoie id-p="IR"/>
+      <cotoie id-p="BRN"/>
+      <cotoie id-p="IRQ"/>
+      <cotoie id-p="KWT"/>
+      <cotoie id-p="SA"/>
+      <cotoie id-p="OM"/>
+      <cotoie id-p="UAE"/>
+      <cotoie id-p="Q"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Rotes_Meer" nom-e="Red Sea" type="mer">
+      <cotoie id-p="IL"/>
+      <cotoie id-p="ET"/>
+      <cotoie id-p="JOR"/>
+      <cotoie id-p="SA"/>
+      <cotoie id-p="YE"/>
+      <cotoie id-p="SUD"/>
+      <cotoie id-p="DJI"/>
+      <cotoie id-p="ER"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-GulfAden" nom-e="Gulf of Aden" type="inconnu">
+      <cotoie id-p="DJI"/>
+      <cotoie id-p="SP"/>
+      <cotoie id-p="YE"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Bengal" nom-e="Gulf of Bengal" type="inconnu">
+      <cotoie id-p="BD"/>
+      <cotoie id-p="MYA"/>
+      <cotoie id-p="IND"/>
+      <cotoie id-p="CL"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-AndamanSea" nom-e="Andaman Sea" type="mer">
+      <cotoie id-p="MYA"/>
+      <cotoie id-p="IND"/>
+      <cotoie id-p="THA"/>
+      <cotoie id-p="RI"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-MalakkaStrait" nom-e="Malakka Strait" type="inconnu">
+      <cotoie id-p="THA"/>
+      <cotoie id-p="RI"/>
+      <cotoie id-p="MAL"/>
+      <cotoie id-p="SGP"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Javasee" nom-e="Java Sea" type="mer">
+      <cotoie id-p="RI"/>
+      <cotoie id-p="TL"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Bandasee" nom-e="Banda Sea" type="mer">
+      <cotoie id-p="RI"/>
+      <cotoie id-p="TL"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Celebessee" nom-e="Sulawesi Sea" type="mer">
+      <cotoie id-p="RI"/>
+      <cotoie id-p="MAL"/>
+      <cotoie id-p="RP"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Sulusee" nom-e="Sulu Sea" type="mer">
+      <cotoie id-p="MAL"/>
+      <cotoie id-p="RP"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Arafurasee" nom-e="Arafura Sea" type="mer">
+      <cotoie id-p="RI"/>
+      <cotoie id-p="PNG"/>
+      <cotoie id-p="AUS"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Korallensee" nom-e="Coral Sea" type="mer">
+      <cotoie id-p="AUS"/>
+      <cotoie id-p="PNG"/>
+      <cotoie id-p="NCA"/>
+      <cotoie id-p="VU"/>
+      <cotoie id-p="SLB"/>
+    </espace-maritime>
+    <espace-maritime id-e="sea-Tasmansee" nom-e="Tasman Sea" type="mer">
+      <cotoie id-p="AUS"/>
+      <cotoie id-p="NZ"/>
+      <cotoie id-p="NORF"/>
+      <cotoie id-p="NCA"/>
+    </espace-maritime>
+  </liste-espace-maritime>
 </em>
