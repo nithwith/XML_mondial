@@ -78,32 +78,32 @@ function result_dom($list_country, $list_river, $list_sea){
 
   $imp = new DOMImplementation;
   $dtd = $imp->createDocumentType('em', '', 'em.dtd');
-  $resultXML = new DOMDocument('1.0', 'utf-8');
-  $resultXML->appendChild($dtd);
+  $xml = new DOMDocument('1.0', 'utf-8');
+  $xml->appendChild($dtd);
 
   // AutoIndent le code
-  $resultXML->preserveWhiteSpace = false;
-  $resultXML->formatOutput = true;
+  $xml->preserveWhiteSpace = false;
+  $xml->formatOutput = true;
 
-  // Création de la racine
-  $racine = $resultXML->createElement('em');
+  //Ajout du contenu
+  $content = create_content_dom($list_country, $list_river, $list_sea, $xml);
 
-  //Ajout du conten
-  $racine->appendChild(create_content_dom($list_country, $list_river, $list_sea, $resultXML ));
+  $xml->appendChild($content);
 
-  $resultXML->appendChild($racine);
-
-  $resultXML->save('out/result_sax.xml');
+  $xml->save('out/result_sax_dom.xml');
 }
 
-function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
-  $res = $doctmp->createElement('liste-pays');
+function create_content_dom($list_country, $list_river, $list_sea, $xml ) {
+
+  $em = $xml->createElement('em');
+
+  $liste_pays = $xml->createElement('liste-pays');
 
   $list_country_selected = select_country($list_river, $list_sea);
 
   foreach ($list_country as $c) {
     if(in_array($c->_car_code, $list_country_selected)){
-      $country =  $doctmp->createElement('pays');
+      $country =  $xml->createElement('pays');
 
       $country->setAttribute('id-p', $c->_car_code);
       $country->setAttribute('nom-p', $c->_name);
@@ -112,7 +112,7 @@ function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
 
       foreach ($list_river as $r) {
         if($c->_car_code == $r->_source){
-          $fleuve = $doctmp->createElement('fleuve');
+          $fleuve = $xml->createElement('fleuve');
 
           $fleuve->setAttribute('id-f', $r->_id);
           $fleuve->setAttribute('nom-f', $r->_name);
@@ -121,7 +121,7 @@ function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
 
           $splited = explode(" ", $r->_countrys);
             foreach ($splited as $car_code) {
-                $parcourt = $doctmp->createElement('parcourt');
+                $parcourt = $xml->createElement('parcourt');
                 $parcourt->setAttribute('id-pays', $car_code);
 
                 if (sizeof($splited) == 1) {
@@ -134,14 +134,14 @@ function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
             $country->appendChild($fleuve);
           }
         }
-        $res->appendChild($country);
+        $liste_pays->appendChild($country);
       }
     }
 
-    $em = $doctmp->createElement('liste-espace-maritime');
+    $liste_espace_maritime = $xml->createElement('liste-espace-maritime');
 
     foreach ($list_sea as $s) {
-      $sea = $doctmp->createElement('espace-maritime');
+      $sea = $xml->createElement('espace-maritime');
 
       $sea->setAttribute('id-e',$s->_id);
       $sea->setAttribute('nom-e',$s->_name);
@@ -150,15 +150,17 @@ function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
       $splited = explode(" ",$s->_countrys);
 
       foreach ($splited as $id) {
-          $cnt = $doctmp->createElement('cotoie');
+          $cnt = $xml->createElement('cotoie');
 
           $cnt->setAttribute('id-p', $id);
           $sea->appendChild($cnt);
       }
-      $em->appendChild($sea);
+      $liste_espace_maritime->appendChild($sea);
     }
-    $res->appendChild($em);
-  return $res;
+
+  $em->appendChild($liste_pays);
+  $em->appendChild($liste_espace_maritime);
+  return $em;
 }
 
 

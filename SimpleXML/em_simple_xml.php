@@ -25,8 +25,8 @@ class Sea
   public $_countrys;
 }
 
-if (file_exists('../Mondial2015/XML/mondial.xml')) {
-    $xml = simplexml_load_file('../Mondial2015/XML/mondial.xml');
+if (file_exists('Mondial2015/XML/mondial.xml')) {
+    $xml = simplexml_load_file('Mondial2015/XML/mondial.xml');
 }
 
 $list_country = array();
@@ -124,19 +124,18 @@ function result_dom($list_country, $list_river, $list_sea){
   $xml->preserveWhiteSpace = false;
   $xml->formatOutput = true;
 
-  // Création de la racine
-  $racine = $xml->createElement('em');
-
   //Ajout du contenu
   $content = create_content_dom($list_country, $list_river, $list_sea, $xml);
-  $racine->appendChild($content);
 
-  $xml->appendChild($racine);
+  $xml->appendChild($content);
 
-  $xml->save('result_simple_xml.xml');
+  $xml->save('out/result_simple_xml.xml');
 }
 
 function create_content_dom($list_country, $list_river, $list_sea, $xml ) {
+
+  $em = $xml->createElement('em');
+
   $liste_pays = $xml->createElement('liste-pays');
 
   $list_country_selected = select_country($list_river, $list_sea);
@@ -197,9 +196,9 @@ function create_content_dom($list_country, $list_river, $list_sea, $xml ) {
       }
       $liste_espace_maritime->appendChild($sea);
     }
-    $xml->appendChild($liste_pays);
-    //$xml->appendChild($liste_espace_maritime);
-  return $xml;
+    $em->appendChild($liste_pays);
+    $em->appendChild($liste_espace_maritime);
+  return $em;
 }
 
 ?>
