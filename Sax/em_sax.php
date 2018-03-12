@@ -93,7 +93,7 @@ function result_dom($list_country, $list_river, $list_sea){
 
   $resultXML->appendChild($racine);
 
-  $resultXML->save('result_sax_dom.xml');
+  $resultXML->save('out/result_sax.xml');
 }
 
 function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
@@ -161,70 +161,6 @@ function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
   return $res;
 }
 
-//Export de la structure de donnée dans un fichier XML suivant la dtd
-function display($list_country, $list_river, $list_sea){
-
-  $list_river = select_river($list_river);
-  $list_country_selected = select_country($list_river, $list_sea);
-
-
-  $file = fopen('result_sax.xml', 'a+');
-  ftruncate($file,0);
-
-  fputs($file, "<?xml version='1.0' encoding='UTF-8' ?>\n");
-  fputs($file, "<!DOCTYPE espace-maritime SYSTEM 'em.dtd'>\n");
-  fputs($file, "<em>\n");
-  fputs($file, "\t<liste-pays>\n");
-
-  foreach ($list_country as $country) {
-    if(in_array($country->_car_code, $list_country_selected)){
-      if(country_have_river($country->_car_code, $list_river)){
-
-        fputs($file, "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\">\n");
-
-        foreach ($list_river as $river) {
-          if(strcmp($country->_car_code, $river->_source) == 0){
-            fputs($file, "\t\t\t<fleuve id-f=\"{$river->_id}\"
-            nom-f=\"{$river->_name}\"
-            longueur=\"{$river->_length}\"
-            se-jette=\"{$river->_flow}\">\n");
-            $country_list = explode(" ", $river->_countrys);
-            if(count($country_list) == 1){
-              fputs($file, "\t\t\t\t<parcourt id-pays=\"{$country_list[0]}\" distance=\"{$river->_length}\"/>\n");
-            }
-            else{
-              foreach ($country_list as $c) {
-                fputs($file, "\t\t\t\t<parcourt id-pays=\"{$c}\" distance=\"inconnu\"/>\n");
-              }
-            }
-            fputs($file, "\t\t\t</fleuve>\n");
-          }
-        }
-        fputs($file, "\t\t</pays>\n");
-      }
-      else{
-        fputs($file, "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\"/>\n");
-      }
-    }
-  }
-  fputs($file, "\t</liste-pays>\n");
-
-  //Espaces martimes
-  fputs($file, "\t<liste-espace-maritime>\n");
-
-  foreach ($list_sea as $sea) {
-    fputs($file, "\t\t<espace-maritime id-e=\"{$sea->_id}\" nom-e=\"{$sea->_name}\" type=\"{$sea->_type}\">\n");
-
-    $country_list = explode(" ", $sea->_countrys);
-
-    foreach ($country_list as $country){
-      fputs($file, "\t\t\t<cotoie id-p=\"{$country}\"/>\n");
-    }
-    fputs($file, "\t\t</espace-maritime>\n");
-  }
-  fputs($file, "\t</liste-espace-maritime>\n");
-  fputs($file, "</em>\n");
-}
 
 class MySaxHandler extends DefaultHandler {
 
@@ -376,7 +312,6 @@ class MySaxHandler extends DefaultHandler {
 
   }
   function endDocument() {
-    display($this->list_country, $this->list_river, $this->list_sea);
     result_dom($this->list_country, $this->list_river, $this->list_sea);
 
 }
@@ -384,7 +319,7 @@ class MySaxHandler extends DefaultHandler {
 }
 
 
-$xml = file_get_contents('../Mondial2015/XML/mondial.xml');
+$xml = file_get_contents('Mondial2015/XML/mondial.xml');
 
 $sax = new SaxParser(new MySaxHandler());
 try {

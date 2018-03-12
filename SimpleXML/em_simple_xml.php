@@ -25,8 +25,8 @@ class Sea
   public $_countrys;
 }
 
-if (file_exists('../Mondial2015/XML/mondial.xml')) {
-    $xml = simplexml_load_file('../Mondial2015/XML/mondial.xml');
+if (file_exists('Mondial2015/XML/mondial.xml')) {
+    $xml = simplexml_load_file('Mondial2015/XML/mondial.xml');
 }
 
 $list_country = array();
@@ -132,7 +132,7 @@ function result_dom($list_country, $list_river, $list_sea){
 
   $resultXML->appendChild($racine);
 
-  $resultXML->save('result_simple_xml_dom.xml');
+  $resultXML->save('out/result_simple_xml.xml');
 }
 
 function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
