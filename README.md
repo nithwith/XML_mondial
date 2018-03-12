@@ -1,31 +1,21 @@
 # sax_mondial
 
-Pour exexuter les développements réalisés merci de suivre les instruction ci dessous
+Pour éxécuter les développements réalisés merci de suivre les instructions ci dessous
+Il est possible de lancer le script shell "exec.sh" avec la commande "./exec.sh". Celui ci va lancer tous les exercices. Si vous voulez lancer les commandes manuellement il faut :
+/!\Se placer dans le répertoire racine du projet /!\
+
 
 ### Configuration obligatoire
 - PHP 7.0.25
 
 ## XSLT
-- Rendez vous dans le répertoire Xslt
-
-A COMPLETER
+-Commande : time java -jar Xslt/saxon9he.jar -xsl:Xslt/ex1.xsl -s:Mondial2015/XML/mondial.xml -o:out/ex1.xml
 
 ## SAX
-- Rendez vous dans le répertoire Sax
-- executer la commande : php em_sax.php
-
-Vous trouverez ensuite le fichier de résultat dans votre répertoire sous le nom : result_sax.xml
+-Commande : time php em_sax.php
 
 ## DOM
-- Rendez vous dans le répertoire Dom
-- executer la commande : php
-
-A COMPLETER
-
-
+-Commande : time php ex2_without_xpath.php ou time php ex2_with_xpath.php
 
 ## Simple XML
-- Rendez vous dans le répertoire SimpleXML
-- executer la commande : php em_simple_xml.php
-
-Vous trouverez ensuite le fichier de résultat dans votre répertoire sous le nom : result_simple.xml
+-Commande : time php em_simple_xml.php
