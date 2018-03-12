@@ -76,82 +76,7 @@ foreach ($xml->sea as $sea) {
   $list_sea[] = $sea_temp;
 }
 
-  display($list_country, $list_river, $list_sea);
-
-
-
-
-function display($list_country, $list_river, $list_sea){
-
-  $list_country_selected = select_country($list_river, $list_sea);
-
-  echo "select :".count($list_country_selected). "\n";
-  echo "country :".count($list_country). "\n";
-  echo "river :".count($list_river). "\n";
-
-
-
-  $file = fopen('result_simple.xml', 'a+');
-  ftruncate($file,0);
-
-  fputs($file, "<?xml version='1.0' encoding='UTF-8' ?>\n");
-  fputs($file, "<!DOCTYPE espace-maritime SYSTEM 'em.dtd'>\n");
-  fputs($file, "<em>\n");
-  fputs($file, "\t<liste-pays>\n");
-
-  foreach ($list_country as $country) {
-    if(in_array($country->_car_code, $list_country_selected)){
-
-      if(country_have_river($country->_car_code, $list_river)){
-
-        fputs($file, "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\">\n");
-
-        foreach ($list_river as $river) {
-
-          if(strcmp($country->_car_code, $river->_source) == 0){
-            fputs($file, "\t\t\t<fleuve id-f=\"{$river->_id}\"
-             nom-f=\"{$river->_name}\"
-             longueur=\"{$river->_length}\"
-             se-jette=\"{$river->_flow}\">\n");
-            $country_list = explode(" ", $river->_countrys);
-            if(count($country_list) == 1){
-              fputs($file, "\t\t\t\t<parcourt id-pays=\"{$country_list[0]}\" distance=\"{$river->_length}\"/>\n");
-            }
-            else{
-              foreach ($country_list as $c) {
-                fputs($file, "\t\t\t\t<parcourt id-pays=\"{$c}\" distance=\"inconnu\"/>\n");
-              }
-            }
-            fputs($file, "\t\t\t</fleuve>\n");
-          }
-        }
-        fputs($file, "\t\t</pays>\n");
-      }
-      else{
-        fputs($file, "\t\t<pays id-p=\"{$country->_car_code}\" nom-p=\"{$country->_name}\" superficie=\"{$country->_area}\" nbhab=\"{$country->_population}\"/>\n");
-      }
-    }
-  }
-  fputs($file, "\t</liste-pays>\n\n");
-
-  //Espaces martimes
-  fputs($file, "\t<liste-espace-maritime>\n");
-
-
-  foreach ($list_sea as $sea) {
-    fputs($file, "\t\t<espace-maritime id-e=\"{$sea->_id}\" nom-e=\"{$sea->_name}\" type=\"{$sea->_type}\">\n");
-
-    $country_list = explode(" ", $sea->_countrys);
-
-    foreach ($country_list as $country){
-      fputs($file, "\t\t\t<cotoie id-p=\"{$country}\"/>\n");
-    }
-    fputs($file, "\t\t</espace-maritime>\n");
-  }
-  fputs($file, "\t</liste-espace-maritime>\n");
-  fputs($file, "</em>\n");
-}
-
+result_dom($list_country, $list_river, $list_sea);
 
 function country_have_river($car_code, $list_river) {
   foreach ($list_river as $river) {
@@ -185,6 +110,94 @@ function select_country($list_river, $list_sea){
   }
   $list_country_selected = array_unique($list_country_selected);
   return $list_country_selected;
+}
+
+//Export avec DOM
+function result_dom($list_country, $list_river, $list_sea){
+
+  $imp = new DOMImplementation;
+  $dtd = $imp->createDocumentType('em', '', 'em.dtd');
+  $resultXML = new DOMDocument('1.0', 'utf-8');
+  $resultXML->appendChild($dtd);
+
+  // AutoIndent le code
+  $resultXML->preserveWhiteSpace = false;
+  $resultXML->formatOutput = true;
+
+  // Création de la racine
+  $racine = $resultXML->createElement('em');
+
+  //Ajout du conten
+  $racine->appendChild(create_content_dom($list_country, $list_river, $list_sea, $resultXML ));
+
+  $resultXML->appendChild($racine);
+
+  $resultXML->save('result_simple_xml_dom.xml');
+}
+
+function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
+  $res = $doctmp->createElement('liste-pays');
+
+  $list_country_selected = select_country($list_river, $list_sea);
+
+  foreach ($list_country as $c) {
+    if(in_array($c->_car_code, $list_country_selected)){
+      $country =  $doctmp->createElement('pays');
+
+      $country->setAttribute('id-p', $c->_car_code);
+      $country->setAttribute('nom-p', $c->_name);
+      $country->setAttribute('superficie', $c->_area);
+      $country->setAttribute('nbhab', $c->_population);
+
+      foreach ($list_river as $r) {
+        if(strcmp($c->_car_code, $r->_source) == 0){
+          $fleuve = $doctmp->createElement('fleuve');
+
+          $fleuve->setAttribute('id-f', $r->_id);
+          $fleuve->setAttribute('nom-f', $r->_name);
+          $fleuve->setAttribute('longueur', $r->_length);
+          $fleuve->setAttribute('se-jette', $r->_flow);
+
+          $splited = explode(" ", $r->_countrys);
+            foreach ($splited as $car_code) {
+                $parcourt = $doctmp->createElement('parcourt');
+                $parcourt->setAttribute('id-pays', $car_code);
+
+                if (sizeof($splited) == 1) {
+                  $parcourt->setAttribute('distance', $r->_length);
+                } else {
+                  $parcourt->setAttribute('distance', 'inconnu');
+                }
+                $fleuve->appendChild($parcourt);
+            }
+            $country->appendChild($fleuve);
+          }
+        }
+        $res->appendChild($country);
+      }
+    }
+
+    $em = $doctmp->createElement('liste-espace-maritime');
+
+    foreach ($list_sea as $s) {
+      $sea = $doctmp->createElement('espace-maritime');
+
+      $sea->setAttribute('id-e',$s->_id);
+      $sea->setAttribute('nom-e',$s->_name);
+      $sea->setAttribute('type',$s->_type);
+
+      $splited = explode(" ",$s->_countrys);
+
+      foreach ($splited as $id) {
+          $cnt = $doctmp->createElement('cotoie');
+
+          $cnt->setAttribute('id-p', $id);
+          $sea->appendChild($cnt);
+      }
+      $em->appendChild($sea);
+    }
+    $res->appendChild($em);
+  return $res;
 }
 
 ?>

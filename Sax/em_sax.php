@@ -8,7 +8,6 @@ class Country
   public $_area;
   public $_population;
 }
-
 class River
 {
   public $_id;
@@ -19,7 +18,6 @@ class River
   public $_flow_in_sea;
   public $_source; //car_code
 }
-
 class Sea
 {
   public $_id;
@@ -39,6 +37,131 @@ function country_have_river($car_code, $list_river) {
   return False;
 }
 
+//Séléction des fleuves
+function select_river($list_river) {
+  $result = array();
+  foreach ($list_river as $river) {
+    if(!empty($river->_flow_in_sea) && $river->_flow_in_sea == "sea" && !empty($river->_flow)){
+      $result[] = $river;
+    }
+  }
+  return $result;
+}
+
+//Séléction des pays
+function select_country($list_river, $list_sea){
+  //Pour être affiché un pays doit avoir 2 caractéristique
+  //Doit être traverssé par un fleuve
+  //Doit faire parti d'un espace maritime
+
+  $list_country_selected = array();
+  foreach ($list_river as $river) {
+    $countrys_of_river = explode(" ", $river->_countrys);
+    foreach ($countrys_of_river as $c) {
+      $list_country_selected[] = $c;
+    }
+  }
+  foreach ($list_sea as $sea) {
+    $countrys_of_sea = explode(" ", $sea->_countrys);
+    foreach ($countrys_of_sea as $c) {
+      $list_country_selected[] = $c;
+    }
+  }
+  $list_country_selected = array_unique($list_country_selected);
+  return $list_country_selected;
+}
+
+//Export avec DOM
+function result_dom($list_country, $list_river, $list_sea){
+
+  $list_river = select_river($list_river);
+
+  $imp = new DOMImplementation;
+  $dtd = $imp->createDocumentType('em', '', 'em.dtd');
+  $resultXML = new DOMDocument('1.0', 'utf-8');
+  $resultXML->appendChild($dtd);
+
+  // AutoIndent le code
+  $resultXML->preserveWhiteSpace = false;
+  $resultXML->formatOutput = true;
+
+  // Création de la racine
+  $racine = $resultXML->createElement('em');
+
+  //Ajout du conten
+  $racine->appendChild(create_content_dom($list_country, $list_river, $list_sea, $resultXML ));
+
+  $resultXML->appendChild($racine);
+
+  $resultXML->save('result_sax_dom.xml');
+}
+
+function create_content_dom($list_country, $list_river, $list_sea, $doctmp ) {
+  $res = $doctmp->createElement('liste-pays');
+
+  $list_country_selected = select_country($list_river, $list_sea);
+
+  foreach ($list_country as $c) {
+    if(in_array($c->_car_code, $list_country_selected)){
+      $country =  $doctmp->createElement('pays');
+
+      $country->setAttribute('id-p', $c->_car_code);
+      $country->setAttribute('nom-p', $c->_name);
+      $country->setAttribute('superficie', $c->_area);
+      $country->setAttribute('nbhab', $c->_population);
+
+      foreach ($list_river as $r) {
+        if($c->_car_code == $r->_source){
+          $fleuve = $doctmp->createElement('fleuve');
+
+          $fleuve->setAttribute('id-f', $r->_id);
+          $fleuve->setAttribute('nom-f', $r->_name);
+          $fleuve->setAttribute('longueur', $r->_length);
+          $fleuve->setAttribute('se-jette', $r->_flow);
+
+          $splited = explode(" ", $r->_countrys);
+            foreach ($splited as $car_code) {
+                $parcourt = $doctmp->createElement('parcourt');
+                $parcourt->setAttribute('id-pays', $car_code);
+
+                if (sizeof($splited) == 1) {
+                  $parcourt->setAttribute('distance', $r->_length);
+                } else {
+                  $parcourt->setAttribute('distance', 'inconnu');
+                }
+                $fleuve->appendChild($parcourt);
+            }
+            $country->appendChild($fleuve);
+          }
+        }
+        $res->appendChild($country);
+      }
+    }
+
+    $em = $doctmp->createElement('liste-espace-maritime');
+
+    foreach ($list_sea as $s) {
+      $sea = $doctmp->createElement('espace-maritime');
+
+      $sea->setAttribute('id-e',$s->_id);
+      $sea->setAttribute('nom-e',$s->_name);
+      $sea->setAttribute('type',$s->_type);
+
+      $splited = explode(" ",$s->_countrys);
+
+      foreach ($splited as $id) {
+          $cnt = $doctmp->createElement('cotoie');
+
+          $cnt->setAttribute('id-p', $id);
+          $sea->appendChild($cnt);
+      }
+      $em->appendChild($sea);
+    }
+    $res->appendChild($em);
+  return $res;
+}
+
+//Export de la structure de donnée dans un fichier XML suivant la dtd
 function display($list_country, $list_river, $list_sea){
 
   $list_river = select_river($list_river);
@@ -101,40 +224,6 @@ function display($list_country, $list_river, $list_sea){
   }
   fputs($file, "\t</liste-espace-maritime>\n");
   fputs($file, "</em>\n");
-}
-
-//Séléction des fleuves
-function select_river($list_river) {
-  $result = array();
-  foreach ($list_river as $river) {
-    if(!empty($river->_flow_in_sea) && $river->_flow_in_sea == "sea" && !empty($river->_flow)){
-      $result[] = $river;
-    }
-  }
-  return $result;
-}
-
-//Séléction des pays
-function select_country($list_river, $list_sea){
-  //Pour être affiché un pays doit avoir 2 caractéristique
-  //Doit être traverssé par un fleuve
-  //Doit faire parti d'un espace maritime
-
-  $list_country_selected = array();
-  foreach ($list_river as $river) {
-    $countrys_of_river = explode(" ", $river->_countrys);
-    foreach ($countrys_of_river as $c) {
-      $list_country_selected[] = $c;
-    }
-  }
-  foreach ($list_sea as $sea) {
-    $countrys_of_sea = explode(" ", $sea->_countrys);
-    foreach ($countrys_of_sea as $c) {
-      $list_country_selected[] = $c;
-    }
-  }
-  $list_country_selected = array_unique($list_country_selected);
-  return $list_country_selected;
 }
 
 class MySaxHandler extends DefaultHandler {
@@ -288,11 +377,11 @@ class MySaxHandler extends DefaultHandler {
   }
   function endDocument() {
     display($this->list_country, $this->list_river, $this->list_sea);
+    result_dom($this->list_country, $this->list_river, $this->list_sea);
 
 }
 
 }
-
 
 
 $xml = file_get_contents('../Mondial2015/XML/mondial.xml');
@@ -305,10 +394,4 @@ try {
 }catch(Exception $e) {
 	echo "Default exception >>", $e;
 }
-
-
-
-
-
-
 ?>
