@@ -17,7 +17,6 @@ Si vous voulez lancer les commandes manuellement il faut :
 ### Configuration obligatoire
 - PHP 7.0.25
 - Java
-- BaseX (apt-get install basex)
 
 ## XSLT
 -Commande : `time java -jar Xslt/saxon9he.jar -xsl:Xslt/ex1.xsl -s:Mondial2015/XML/mondial.xml -o:out/ex1.xml`
@@ -40,6 +39,6 @@ Si vous voulez lancer les commandes manuellement il faut :
 -Résultat : `out/result_simple_xml.xml`
 
 ## Xquery
--Commande : `basex Xquery/em_xquery.xq -o out/result_x_query.xml`
+-Commande : `java -cp BaseX90.jar org.basex.BaseX -o out/xquery.xml Xquery/em_xquery.xq
 
 -Résultat : `out/xquery.xml`
