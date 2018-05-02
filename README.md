@@ -39,6 +39,6 @@ Si vous voulez lancer les commandes manuellement il faut :
 -Résultat : `out/result_simple_xml.xml`
 
 ## Xquery
--Commande : `java -cp BaseX90.jar org.basex.BaseX -o out/xquery.xml Xquery/em_xquery.xq
+-Commande : `java -cp BaseX90.jar org.basex.BaseX -o out/xquery.xml Xquery/em_xquery.xq`
 
 -Résultat : `out/xquery.xml`
