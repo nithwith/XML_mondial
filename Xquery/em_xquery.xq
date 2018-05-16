@@ -17,7 +17,6 @@ declare function functx:contains-word
    matches(upper-case($arg), concat('^(.*\W)?', upper-case(functx:escape-for-regex($word)),'(\W.*)?$'))
  } ;
 
-
 <em>
 <liste-pays>
 {
@@ -32,8 +31,8 @@ return <pays id-p="{data($pays/@car_code)}" nom-p="{data($pays/name)}" superfici
       for $parcours in $source/mondial/country[functx:contains-word($countrys, @car_code)]    
       return 
         if (functx:word-count($fleuve/@country) = 1)
-        then <parcours id-pays="{data($parcours/@car_code)}"  distance="{data($fleuve/length)}"/>
-        else <parcours id-pays="{data($parcours/@car_code)}"  distance="inconnu"/>
+        then <parcourt id-pays="{data($parcours/@car_code)}"  distance="{data($fleuve/length)}"/>
+        else <parcourt id-pays="{data($parcours/@car_code)}"  distance="inconnu"/>
       }
   </fleuve>
   }
@@ -45,7 +44,7 @@ return <pays id-p="{data($pays/@car_code)}" nom-p="{data($pays/name)}" superfici
 {
 let $source := doc("../Mondial2015/XML/mondial.xml")
 for $em in $source/mondial/sea
-return <espace-maritime id-e="{data($em/@id)}" nom-e="{data($em/name)}">
+return <espace-maritime id-e="{data($em/@id)}" type="inconnu" nom-e="{data($em/name)}">
   {
   let $countrys := normalize-space($em/@country)
   for $cotoie in $source/mondial/country[functx:contains-word($countrys, @car_code)]
