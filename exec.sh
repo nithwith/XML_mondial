@@ -1,4 +1,3 @@
-rm out/*.xml
 echo ---------- SHELL d execution du TP ----------
 echo ----- Lancement de l exercice 1 : XSL -----
 echo ----- Fichier de sorti : ex1.xml -----

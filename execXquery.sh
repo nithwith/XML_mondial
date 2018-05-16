@@ -1,4 +1,3 @@
-rm out/*.xml
 echo ---------- SHELL d execution du Distanciel Xquery ----------
 echo ------ Théos ------
 echo ----- Lancement de l exercice : XQUERY -----
